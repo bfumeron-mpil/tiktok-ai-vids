@@ -471,7 +471,8 @@ SCENES.players = (t, T, d) => {
 
 SCENES.tactic = (t, T, d) => {
   const S = EP.tactic;
-  setCam(kf(t, [[0, [-48, 62, 0]], [d, [-38, 54, 9]]], x => x), [14, 0, 0], 44);
+  const tc = S.cam || { eye: [[0, [-48, 62, 0]], [d, [-38, 54, 9]]], target: [[0, [14, 0, 0]]], fov: 44 };
+  setCam(kf(t, tc.eye, x => x), kf(t, tc.target, x => x), tc.fov || 44);
   world(T);
   const pos = basePositions();
   for (const id in S.moves) pos[id] = kf(t, S.moves[id]);

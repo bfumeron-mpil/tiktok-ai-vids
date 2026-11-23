@@ -1,0 +1,1369 @@
+{
+  "brand": {
+    "a": "0,11",
+    "b": "xG"
+  },
+  "meta": {
+    "slug": "ep002-steaua-barcelone-1986",
+    "epLabel": "JOUR 2/365 · STEAUA – BARCELONE · 1986",
+    "date": "1986-05-07",
+    "publishDate": "2026-11-26",
+    "final": [
+      0,
+      2
+    ],
+    "archive": "ARCHIVE",
+    "archiveNo": "N°002",
+    "factcheck": {
+      "statut": "validé",
+      "date": "2026-11-23",
+      "par": "xg-recherche",
+      "fiche": "episodes/fiches/ep002-steaua-barcelone-1986.md",
+      "grille": "episodes/fiches/ep002-steaua-barcelone-1986.factcheck.md"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/1986_European_Cup_final",
+      "https://worldfootball.net/report/champions-league-1985-1986-endspiel-steaua-bucuresti-fc-barcelona"
+    ]
+  },
+  "style": {
+    "fog": 0.14,
+    "bpm": 112
+  },
+  "teams": {
+    "A": {
+      "name": "Barcelone",
+      "short": "BAR",
+      "color": "#1D3F9E",
+      "rim": "#E04A6A"
+    },
+    "B": {
+      "name": "Steaua",
+      "short": "STE",
+      "color": "#D4202A",
+      "rim": "#FF8A8A"
+    }
+  },
+  "players": [
+    {
+      "id": "S1",
+      "team": "B",
+      "name": "Duckadam",
+      "pos": [
+        52.2,
+        0
+      ],
+      "num": "1"
+    },
+    {
+      "id": "S2",
+      "team": "B",
+      "name": "Iovan",
+      "pos": [
+        -2.0,
+        -12.0
+      ]
+    },
+    {
+      "id": "S3",
+      "team": "B",
+      "name": "Bărbulescu",
+      "pos": [
+        -2.0,
+        -9.4
+      ]
+    },
+    {
+      "id": "S4",
+      "team": "B",
+      "name": "Bumbescu",
+      "pos": [
+        -2.0,
+        -6.8
+      ]
+    },
+    {
+      "id": "S5",
+      "team": "B",
+      "name": "Belodedici",
+      "pos": [
+        -2.0,
+        -4.199999999999999
+      ]
+    },
+    {
+      "id": "S6",
+      "team": "B",
+      "name": "Bălan",
+      "pos": [
+        -2.0,
+        -1.5999999999999996
+      ]
+    },
+    {
+      "id": "S7",
+      "team": "B",
+      "name": "Bölöni",
+      "pos": [
+        -2.0,
+        1.0
+      ]
+    },
+    {
+      "id": "S8",
+      "team": "B",
+      "name": "Majearu",
+      "pos": [
+        -2.0,
+        3.6000000000000014
+      ]
+    },
+    {
+      "id": "S9",
+      "team": "B",
+      "name": "Balint",
+      "pos": [
+        -2.0,
+        6.199999999999999
+      ]
+    },
+    {
+      "id": "S10",
+      "team": "B",
+      "name": "Lăcătuș",
+      "pos": [
+        -2.0,
+        8.8
+      ]
+    },
+    {
+      "id": "S11",
+      "team": "B",
+      "name": "Pițurcă",
+      "pos": [
+        -2.0,
+        11.400000000000002
+      ]
+    },
+    {
+      "id": "B1",
+      "team": "A",
+      "name": "Urruti",
+      "pos": [
+        46,
+        24
+      ]
+    },
+    {
+      "id": "B2",
+      "team": "A",
+      "name": "Gerardo",
+      "pos": [
+        2.0,
+        -12.0
+      ]
+    },
+    {
+      "id": "B3",
+      "team": "A",
+      "name": "Migueli",
+      "pos": [
+        2.0,
+        -9.4
+      ]
+    },
+    {
+      "id": "B4",
+      "team": "A",
+      "name": "Alexanko",
+      "pos": [
+        2.0,
+        -6.8
+      ]
+    },
+    {
+      "id": "B5",
+      "team": "A",
+      "name": "Julio Alberto",
+      "pos": [
+        2.0,
+        -4.199999999999999
+      ]
+    },
+    {
+      "id": "B6",
+      "team": "A",
+      "name": "Víctor Muñoz",
+      "pos": [
+        2.0,
+        -1.5999999999999996
+      ]
+    },
+    {
+      "id": "B7",
+      "team": "A",
+      "name": "Pedraza",
+      "pos": [
+        2.0,
+        1.0
+      ]
+    },
+    {
+      "id": "B8",
+      "team": "A",
+      "name": "Marcos",
+      "pos": [
+        2.0,
+        3.6000000000000014
+      ]
+    },
+    {
+      "id": "B9",
+      "team": "A",
+      "name": "Carrasco",
+      "pos": [
+        2.0,
+        6.199999999999999
+      ]
+    },
+    {
+      "id": "B10",
+      "team": "A",
+      "name": "Pichi Alonso",
+      "pos": [
+        2.0,
+        8.8
+      ]
+    },
+    {
+      "id": "B11",
+      "team": "A",
+      "name": "Moratalla",
+      "pos": [
+        2.0,
+        11.400000000000002
+      ]
+    }
+  ],
+  "hook": {
+    "kicker": "7 MAI 1986 · SÉVILLE",
+    "title": "Une finale de Coupe des champions. *120 minutes sans but.* Puis un gardien roumain entre *dans l'histoire.*"
+  },
+  "context": {
+    "kicker": "LE CONTEXTE",
+    "footerDur": 2.6,
+    "cards": [
+      {
+        "team": "A",
+        "name": "BARCELONE",
+        "tag": "LE GRAND FAVORI",
+        "text": "Le Barça de Terry Venables a renversé un *0-3* en demi-finale. Et la finale se joue… *en Espagne.*"
+      },
+      {
+        "team": "B",
+        "name": "STEAUA",
+        "tag": "LE CLUB DE L'ARMÉE",
+        "text": "Protégé par *Valentin Ceaușescu*, le fils du dictateur. Une Roumanie *pauvre et sous la terreur.*"
+      },
+      {
+        "team": "X",
+        "name": "L'EST",
+        "tag": "PERSONNE N'Y CROIT",
+        "text": "Jamais un club d'Europe de l'Est n'a gagné la Coupe des champions. *Jamais.*"
+      }
+    ],
+    "footer": "À Séville, le stade pousse *pour Barcelone.*"
+  },
+  "keyPlayersKicker": "LES JOUEURS CLÉS",
+  "keyPlayers": [
+    {
+      "id": "S1",
+      "name": "DUCKADAM",
+      "num": "1",
+      "role": "LE GARDIEN · 1,93 M",
+      "line": "27 ans. Ce soir, il joue sans le savoir *son dernier grand match.*"
+    },
+    {
+      "id": "S5",
+      "name": "BELODEDICI",
+      "num": "",
+      "role": "LE LIBÉRO",
+      "line": "Surnommé *« le Cerf »* pour son élégance. Il joue les 120 minutes."
+    },
+    {
+      "id": "S10",
+      "name": "LĂCĂTUȘ",
+      "num": "",
+      "role": "L'ATTAQUANT",
+      "line": "C'est lui qui marquera *le premier tir au but* de Steaua."
+    }
+  ],
+  "tactic": {
+    "kicker": "LA LOGIQUE DU GARDIEN",
+    "cam": {
+      "eye": [
+        [
+          0,
+          [
+            26,
+            16,
+            10
+          ]
+        ],
+        [
+          13,
+          [
+            31,
+            11,
+            7
+          ]
+        ]
+      ],
+      "target": [
+        [
+          0,
+          [
+            48,
+            1,
+            -0.5
+          ]
+        ],
+        [
+          13,
+          [
+            50,
+            1,
+            -1
+          ]
+        ]
+      ],
+      "fov": 40
+    },
+    "focus": [
+      [
+        0,
+        null
+      ],
+      [
+        5.8,
+        "S1"
+      ]
+    ],
+    "moves": {
+      "B4": [
+        [
+          0,
+          [
+            2,
+            -4.2
+          ]
+        ],
+        [
+          0.1,
+          [
+            40.6,
+            0.8
+          ]
+        ],
+        [
+          13,
+          [
+            40.6,
+            0.8
+          ]
+        ]
+      ],
+      "S1": [
+        [
+          0,
+          [
+            52.2,
+            0
+          ]
+        ],
+        [
+          7.0,
+          [
+            52.2,
+            0
+          ]
+        ],
+        [
+          7.6,
+          [
+            51.9,
+            -2.5
+          ]
+        ],
+        [
+          9.4,
+          [
+            51.9,
+            -2.5
+          ]
+        ],
+        [
+          9.8,
+          [
+            52.2,
+            0
+          ]
+        ],
+        [
+          11.2,
+          [
+            52.2,
+            0
+          ]
+        ],
+        [
+          11.9,
+          [
+            51.9,
+            -2.5
+          ]
+        ],
+        [
+          13,
+          [
+            51.9,
+            -2.5
+          ]
+        ]
+      ]
+    },
+    "graphics": [
+      {
+        "type": "zone",
+        "at": [
+          52.4,
+          -2.2
+        ],
+        "r": 1.6,
+        "rgb": "242,193,78",
+        "t0": 3.4,
+        "t1": 12.9
+      },
+      {
+        "type": "zone",
+        "at": [
+          52.4,
+          2.2
+        ],
+        "r": 1.6,
+        "rgb": "255,90,90",
+        "t0": 3.4,
+        "t1": 12.9
+      },
+      {
+        "type": "arrow",
+        "from": [
+          41.5,
+          0
+        ],
+        "to": [
+          51.8,
+          -2.3
+        ],
+        "bend": 0.05,
+        "t0": 6.4,
+        "t1": 12.9,
+        "grow": 0.9,
+        "color": "#F2C14E",
+        "w": 0.18
+      },
+      {
+        "type": "arrow",
+        "from": [
+          41.5,
+          0
+        ],
+        "to": [
+          51.8,
+          2.3
+        ],
+        "bend": -0.05,
+        "t0": 9.6,
+        "t1": 12.9,
+        "grow": 0.9,
+        "color": "#FF5A6E",
+        "w": 0.16,
+        "dashed": true
+      }
+    ],
+    "labels": [
+      {
+        "text": "SA DROITE",
+        "at": [
+          52.4,
+          -5.6
+        ],
+        "t0": 3.6,
+        "t1": 12.9,
+        "bg": "rgba(242,193,78,0.95)",
+        "fg": "#0A0E17"
+      },
+      {
+        "text": "SA GAUCHE",
+        "at": [
+          52.4,
+          5.6
+        ],
+        "t0": 3.6,
+        "t1": 12.9,
+        "bg": "rgba(255,90,90,0.92)",
+        "fg": "#FFFFFF"
+      }
+    ],
+    "beats": [
+      {
+        "t0": 0.2,
+        "t1": 3.1,
+        "text": "120 minutes, *0–0.* Première finale de l'histoire *sans un seul but.*"
+      },
+      {
+        "t0": 3.2,
+        "t1": 6.2,
+        "text": "Tirs au but. Steaua rate *ses deux premiers.* Le Barça n'a plus qu'à marquer."
+      },
+      {
+        "t0": 6.3,
+        "t1": 9.6,
+        "text": "Duckadam arrête le premier, à sa droite. Puis il se met *dans la tête du tireur.*"
+      },
+      {
+        "t0": 9.7,
+        "t1": 12.9,
+        "text": "Le suivant pense qu'il va changer de côté ? Il *replonge à droite.*"
+      }
+    ]
+  },
+  "goals": {
+    "kicker": "LES TIRS AU BUT",
+    "sequences": [
+      {
+        "d": 4.4,
+        "goalAt": 1.6,
+        "focus": "S1",
+        "kicker": "ARRÊT N°1 · ALEXANKO",
+        "text": "Le capitaine du Barça frappe. *Duckadam plonge à droite.* Arrêté.",
+        "cam": {
+          "fov": 36,
+          "eye": [
+            [
+              0,
+              [
+                28,
+                7,
+                10
+              ]
+            ],
+            [
+              1.2,
+              [
+                31,
+                6,
+                8
+              ]
+            ],
+            [
+              4.4,
+              [
+                32,
+                5.5,
+                7.5
+              ]
+            ]
+          ],
+          "target": [
+            [
+              0,
+              [
+                48,
+                1,
+                -0.5
+              ]
+            ],
+            [
+              1.2,
+              [
+                50,
+                1,
+                -1
+              ]
+            ],
+            [
+              4.4,
+              [
+                50.5,
+                1,
+                -1.2
+              ]
+            ]
+          ]
+        },
+        "moves": {
+          "B4": [
+            [
+              0,
+              [
+                39.6,
+                0.8
+              ]
+            ],
+            [
+              1.15,
+              [
+                40.9,
+                0.2
+              ]
+            ],
+            [
+              4.4,
+              [
+                41.2,
+                0.1
+              ]
+            ]
+          ],
+          "S1": [
+            [
+              0,
+              [
+                52.2,
+                0
+              ]
+            ],
+            [
+              1.25,
+              [
+                52.2,
+                -0.3
+              ]
+            ],
+            [
+              1.6,
+              [
+                51.9,
+                -2.5
+              ]
+            ],
+            [
+              4.4,
+              [
+                51.9,
+                -2.6
+              ]
+            ]
+          ]
+        },
+        "heights": {
+          "S1": [
+            [
+              0,
+              1.9
+            ],
+            [
+              1.3,
+              1.9
+            ],
+            [
+              1.55,
+              0.75
+            ],
+            [
+              2.6,
+              0.75
+            ],
+            [
+              3.4,
+              1.9
+            ]
+          ]
+        },
+        "ball": [
+          [
+            0,
+            [
+              41.5,
+              0.12,
+              0
+            ]
+          ],
+          [
+            1.2,
+            [
+              41.5,
+              0.12,
+              0
+            ]
+          ],
+          [
+            1.6,
+            [
+              51.7,
+              0.7,
+              -2.4
+            ]
+          ],
+          [
+            1.75,
+            [
+              49.8,
+              0.9,
+              -3.6
+            ]
+          ],
+          [
+            2.4,
+            [
+              47,
+              0.2,
+              -6.5
+            ]
+          ],
+          [
+            4.4,
+            [
+              46.2,
+              0.12,
+              -7.2
+            ]
+          ]
+        ]
+      },
+      {
+        "d": 4.4,
+        "goalAt": 1.6,
+        "focus": "S1",
+        "kicker": "ARRÊT N°2 · PEDRAZA",
+        "text": "Changer de côté ? *Non.* Encore à droite. *Encore arrêté.*",
+        "cam": {
+          "fov": 36,
+          "eye": [
+            [
+              0,
+              [
+                28,
+                7,
+                10
+              ]
+            ],
+            [
+              1.2,
+              [
+                31,
+                6,
+                8
+              ]
+            ],
+            [
+              4.4,
+              [
+                32,
+                5.5,
+                7.5
+              ]
+            ]
+          ],
+          "target": [
+            [
+              0,
+              [
+                48,
+                1,
+                -0.5
+              ]
+            ],
+            [
+              1.2,
+              [
+                50,
+                1,
+                -1
+              ]
+            ],
+            [
+              4.4,
+              [
+                50.5,
+                1,
+                -1.2
+              ]
+            ]
+          ]
+        },
+        "moves": {
+          "B7": [
+            [
+              0,
+              [
+                39.6,
+                0.8
+              ]
+            ],
+            [
+              1.15,
+              [
+                40.9,
+                0.2
+              ]
+            ],
+            [
+              4.4,
+              [
+                41.2,
+                0.1
+              ]
+            ]
+          ],
+          "S1": [
+            [
+              0,
+              [
+                52.2,
+                0
+              ]
+            ],
+            [
+              1.25,
+              [
+                52.2,
+                -0.3
+              ]
+            ],
+            [
+              1.6,
+              [
+                51.9,
+                -2.5
+              ]
+            ],
+            [
+              4.4,
+              [
+                51.9,
+                -2.6
+              ]
+            ]
+          ]
+        },
+        "heights": {
+          "S1": [
+            [
+              0,
+              1.9
+            ],
+            [
+              1.3,
+              1.9
+            ],
+            [
+              1.55,
+              0.75
+            ],
+            [
+              2.6,
+              0.75
+            ],
+            [
+              3.4,
+              1.9
+            ]
+          ]
+        },
+        "ball": [
+          [
+            0,
+            [
+              41.5,
+              0.12,
+              0
+            ]
+          ],
+          [
+            1.2,
+            [
+              41.5,
+              0.12,
+              0
+            ]
+          ],
+          [
+            1.6,
+            [
+              51.7,
+              0.7,
+              -2.4
+            ]
+          ],
+          [
+            1.75,
+            [
+              49.8,
+              0.9,
+              -3.6
+            ]
+          ],
+          [
+            2.4,
+            [
+              47,
+              0.2,
+              -6.5
+            ]
+          ],
+          [
+            4.4,
+            [
+              46.2,
+              0.12,
+              -7.2
+            ]
+          ]
+        ]
+      }
+    ],
+    "recap": {
+      "step": 0.2,
+      "slamAt": 1.9,
+      "caption": "TIRS AU BUT · SÉVILLE 1986",
+      "sub": "Quatre tirs, *quatre arrêts.* Duckadam devient *« le héros de Séville ».*"
+    },
+    "ticker": [
+      {
+        "at": 0,
+        "who": "MAJEARU · MANQUÉ",
+        "team": "B",
+        "score": [
+          0,
+          0
+        ]
+      },
+      {
+        "at": 1.6,
+        "who": "ALEXANKO · ARRÊTÉ",
+        "team": "A",
+        "score": [
+          0,
+          0
+        ]
+      },
+      {
+        "at": 4.4,
+        "who": "BÖLÖNI · MANQUÉ",
+        "team": "B",
+        "score": [
+          0,
+          0
+        ]
+      },
+      {
+        "at": 6.0,
+        "who": "PEDRAZA · ARRÊTÉ",
+        "team": "A",
+        "score": [
+          0,
+          0
+        ]
+      },
+      {
+        "at": 99,
+        "who": "LĂCĂTUȘ · BUT",
+        "team": "A",
+        "score": [
+          0,
+          1
+        ]
+      },
+      {
+        "at": 99,
+        "who": "PICHI ALONSO · ARRÊTÉ",
+        "team": "A",
+        "score": [
+          0,
+          1
+        ]
+      },
+      {
+        "at": 99,
+        "who": "BALINT · BUT",
+        "team": "A",
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "at": 99,
+        "who": "MARCOS · ARRÊTÉ",
+        "team": "A",
+        "score": [
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  "reach": {
+    "kicker": "LA PORTÉE",
+    "intro": 1.6,
+    "title": "Une nuit qui *redessine* la carte du football.",
+    "items": [
+      {
+        "year": "1986",
+        "title": "L'EST AU SOMMET",
+        "text": "Pour la première fois, la Coupe des champions part *à l'Est.*"
+      },
+      {
+        "year": "1987",
+        "title": "HAGI ARRIVE",
+        "text": "Gheorghe Hagi rejoint Steaua et offre la *Supercoupe d'Europe* contre le Dynamo Kiev."
+      },
+      {
+        "year": "1989",
+        "title": "104 MATCHS SANS PERDRE",
+        "text": "*104 matchs de championnat* sans défaite, record d'Europe. Et une nouvelle *finale* en 1989."
+      },
+      {
+        "year": "1991",
+        "title": "LE CERF, DEUX FOIS",
+        "text": "Belodedici la regagne avec *l'Étoile Rouge* : premier sacré avec deux clubs en jouant *les deux finales.*"
+      },
+      {
+        "year": "1992",
+        "title": "LA REVANCHE DU BARÇA",
+        "text": "Barcelone attendra *six ans* : premier sacre, à Wembley."
+      }
+    ]
+  },
+  "epilogue": {
+    "kicker": "L'ÉPILOGUE",
+    "beats": [
+      {
+        "big": "27 ANS",
+        "fx": "lightsout",
+        "text": "Quelques mois après Séville, une maladie rare du sang. Sa carrière au sommet *s'arrête net.*"
+      },
+      {
+        "big": "2024",
+        "fx": "rain",
+        "text": "Helmuth Duckadam s'éteint à 65 ans. Pour la Roumanie, il reste *« le héros de Séville ».*"
+      },
+      {
+        "fx": "final",
+        "text": "Aucun club roumain ne l'a regagnée depuis. Mais un soir de mai, un gardien a *fait tomber Barcelone.*"
+      }
+    ]
+  },
+  "cta": {
+    "line": "Chaque jour, un match qui a *tout changé.*",
+    "button": "ABONNE-TOI",
+    "next": "Demain : la Juve de Platini, battue par une frappe",
+    "tagline": "Le football improbable, expliqué."
+  },
+  "voiceover": {
+    "hook": "Sept mai mille neuf cent quatre-vingt-six. Séville. Cent vingt minutes… sans un seul but. Puis un gardien roumain entre dans l'histoire.",
+    "context": "En face, le Barça de Terry Venables. Grand favori… et presque à domicile. Steaua, c'est le club de l'armée, protégé par le fils de Ceaușescu, dans une Roumanie pauvre et sous la terreur. Et jamais un club de l'Est n'a gagné cette coupe.",
+    "players": "Duckadam, le gardien. Vingt-sept ans. Belodedici, le libéro. Et Lăcătuș, l'attaquant.",
+    "tactic": "Zéro à zéro. Première finale de l'histoire sans but. Aux tirs au but, Steaua rate ses deux premiers. Mais Duckadam arrête le premier… et se met dans la tête du tireur suivant.",
+    "goals": "Alexanko : arrêté. Pedraza : encore à droite… arrêté. Pichi Alonso : arrêté. Marcos : arrêté. Quatre sur quatre. Steaua gagne deux à zéro.",
+    "reach": "Pour la première fois, la coupe part à l'Est. Hagi arrive, et offre la Supercoupe. Steaua enchaîne cent quatre matchs sans défaite, et retrouve la finale. Belodedici la regagne avec l'Étoile Rouge. Et Barcelone devra attendre mille neuf cent quatre-vingt-douze.",
+    "epilogue": "Quelques mois après Séville, une maladie rare du sang met fin à sa carrière au sommet. Il avait vingt-sept ans. Helmuth Duckadam s'est éteint en deux mille vingt-quatre. Pour la Roumanie… il reste le héros de Séville.",
+    "cta": "Chaque jour, un match qui a tout changé. Abonne-toi."
+  },
+  "voice": {
+    "engine": "elevenlabs",
+    "model": "eleven_v4",
+    "voice_id": "3BZLNrQEzQVYs6kPOW4S",
+    "voice_name": "Justin Doré - Documentary Narrator",
+    "style": "aucun",
+    "lead": 0.3,
+    "tail": 0.6
+  },
+  "timeline": {
+    "hook": [
+      0,
+      5
+    ],
+    "context": [
+      5,
+      17.5
+    ],
+    "players": [
+      17.5,
+      26.5
+    ],
+    "tactic": [
+      26.5,
+      39.5
+    ],
+    "goals": [
+      39.5,
+      51.9
+    ],
+    "reach": [
+      51.9,
+      74.5
+    ],
+    "epilogue": [
+      74.5,
+      85.9
+    ],
+    "cta": [
+      85.9,
+      89.4
+    ]
+  },
+  "nominal": {
+    "hook": 5,
+    "context": 12.5,
+    "players": 9,
+    "tactic": 13,
+    "goals": 12.4,
+    "reach": 22.6,
+    "epilogue": 11.4,
+    "cta": 3.5
+  },
+  "chapters": [
+    {
+      "label": "CONTEXTE",
+      "t0": 5,
+      "t1": 17.5
+    },
+    {
+      "label": "JOUEURS",
+      "t0": 17.5,
+      "t1": 26.5
+    },
+    {
+      "label": "TACTIQUE",
+      "t0": 26.5,
+      "t1": 39.5
+    },
+    {
+      "label": "SÉANCE",
+      "t0": 39.5,
+      "t1": 51.9
+    },
+    {
+      "label": "PORTÉE",
+      "t0": 51.9,
+      "t1": 74.5
+    },
+    {
+      "label": "ÉPILOGUE",
+      "t0": 74.5,
+      "t1": 85.9
+    }
+  ],
+  "i18n": {
+    "en": {
+      "brand": {
+        "a": "0.11",
+        "b": "xG"
+      },
+      "meta": {
+        "epLabel": "DAY 2/365 · STEAUA – BARCELONA · 1986",
+        "archive": "ARCHIVE"
+      },
+      "teams": {
+        "A": {
+          "name": "Barcelona"
+        },
+        "B": {
+          "name": "Steaua"
+        }
+      },
+      "chapters": [
+        {
+          "label": "CONTEXT"
+        },
+        {
+          "label": "PLAYERS"
+        },
+        {
+          "label": "TACTICS"
+        },
+        {
+          "label": "SHOOTOUT"
+        },
+        {
+          "label": "RIPPLE"
+        },
+        {
+          "label": "EPILOGUE"
+        }
+      ],
+      "hook": {
+        "kicker": "7 MAY 1986 · SEVILLE",
+        "title": "A European Cup final. *120 minutes, no goals.* Then a Romanian goalkeeper walks *into history.*"
+      },
+      "context": {
+        "kicker": "THE CONTEXT",
+        "cards": [
+          {
+            "name": "BARCELONA",
+            "tag": "THE BIG FAVOURITE",
+            "text": "Terry Venables' Barça overturned a *0-3* in the semi-final. And the final is played… *in Spain.*"
+          },
+          {
+            "name": "STEAUA",
+            "tag": "THE ARMY CLUB",
+            "text": "Protected by *Valentin Ceaușescu*, the dictator's son. A Romania that is *poor and living in fear.*"
+          },
+          {
+            "name": "THE EAST",
+            "tag": "NOBODY BELIEVES",
+            "text": "No Eastern European club has ever won the European Cup. *Ever.*"
+          }
+        ],
+        "footer": "In Seville, the stadium is roaring *for Barcelona.*"
+      },
+      "keyPlayersKicker": "THE KEY PLAYERS",
+      "keyPlayers": [
+        {
+          "role": "THE GOALKEEPER · 1.93 M",
+          "line": "27 years old. Tonight, without knowing it, he plays *his last big match.*"
+        },
+        {
+          "role": "THE SWEEPER",
+          "line": "Nicknamed *“the Deer”* for his elegance. He plays all 120 minutes."
+        },
+        {
+          "role": "THE STRIKER",
+          "line": "He will score Steaua's *first penalty* of the shootout."
+        }
+      ],
+      "tactic": {
+        "kicker": "THE KEEPER'S LOGIC",
+        "labels": [
+          {
+            "text": "HIS RIGHT"
+          },
+          {
+            "text": "HIS LEFT"
+          }
+        ],
+        "beats": [
+          {
+            "text": "120 minutes, *0–0.* The first final in history *without a single goal.*"
+          },
+          {
+            "text": "Penalties. Steaua miss *their first two.* Barça just have to score."
+          },
+          {
+            "text": "Duckadam saves the first, diving right. Then he gets *inside the taker's head.*"
+          },
+          {
+            "text": "The next one thinks he'll switch sides? He *dives right again.*"
+          }
+        ]
+      },
+      "goals": {
+        "kicker": "THE SHOOTOUT",
+        "sequences": [
+          {
+            "kicker": "SAVE NO. 1 · ALEXANKO",
+            "text": "Barça's captain shoots. *Duckadam dives right.* Saved."
+          },
+          {
+            "kicker": "SAVE NO. 2 · PEDRAZA",
+            "text": "Switch sides? *No.* Right again. *Saved again.*"
+          }
+        ],
+        "recap": {
+          "caption": "SHOOTOUT · SEVILLE 1986",
+          "sub": "Four penalties, *four saves.* Duckadam becomes *“the Hero of Seville”.*"
+        },
+        "ticker": [
+          {
+            "who": "MAJEARU · MISSED"
+          },
+          {
+            "who": "ALEXANKO · SAVED"
+          },
+          {
+            "who": "BÖLÖNI · MISSED"
+          },
+          {
+            "who": "PEDRAZA · SAVED"
+          },
+          {
+            "who": "LĂCĂTUȘ · GOAL"
+          },
+          {
+            "who": "PICHI ALONSO · SAVED"
+          },
+          {
+            "who": "BALINT · GOAL"
+          },
+          {
+            "who": "MARCOS · SAVED"
+          }
+        ]
+      },
+      "reach": {
+        "kicker": "THE RIPPLE EFFECT",
+        "title": "One night that *redraws* football's map.",
+        "items": [
+          {
+            "title": "THE EAST ON TOP",
+            "text": "For the first time, the European Cup goes *east.*"
+          },
+          {
+            "title": "ENTER HAGI",
+            "text": "Gheorghe Hagi joins Steaua and wins the *European Super Cup* against Dynamo Kyiv."
+          },
+          {
+            "title": "104 UNBEATEN",
+            "text": "*104 league games* unbeaten, a European record. And another *final* in 1989."
+          },
+          {
+            "title": "THE DEER, TWICE",
+            "text": "Belodedici wins it again with *Red Star*: the first to win it with two clubs, playing *both finals.*"
+          },
+          {
+            "title": "BARÇA'S REVENGE",
+            "text": "Barcelona wait *six years*: their first title, at Wembley."
+          }
+        ]
+      },
+      "epilogue": {
+        "kicker": "THE EPILOGUE",
+        "beats": [
+          {
+            "big": "AGE 27",
+            "text": "A few months after Seville, a rare blood disorder. His career at the top *ends overnight.*"
+          },
+          {
+            "text": "Helmuth Duckadam dies aged 65. For Romania, he remains *“the Hero of Seville”.*"
+          },
+          {
+            "text": "No Romanian club has won it since. But one night in May, a goalkeeper *brought Barcelona down.*"
+          }
+        ]
+      },
+      "cta": {
+        "line": "Every day, a match that *changed everything.*",
+        "button": "FOLLOW",
+        "next": "Tomorrow: Platini's Juve, beaten by one shot",
+        "tagline": "Improbable football, explained."
+      },
+      "voiceover": {
+        "hook": "May the seventh, nineteen eighty-six. Seville. A hundred and twenty minutes… without a single goal. Then a Romanian goalkeeper walks into history.",
+        "context": "Facing them, Terry Venables' Barcelona. The big favourites… and almost at home. Steaua is the army's club, protected by Ceaușescu's son, in a Romania that is poor and living in fear. And no Eastern club has ever won this cup.",
+        "players": "Duckadam, the goalkeeper. Twenty-seven years old. Belodedici, the sweeper. And Lăcătuș, the striker.",
+        "tactic": "Nil-nil. The first final in history without a goal. In the shootout, Steaua miss their first two. But Duckadam saves the first… and gets inside the next taker's head.",
+        "goals": "Alexanko: saved. Pedraza: right again… saved. Pichi Alonso: saved. Marcos: saved. Four out of four. Steaua win two-nil.",
+        "reach": "For the first time, the cup goes east. Hagi arrives, and wins the Super Cup. Steaua go a hundred and four games unbeaten, and reach another final. Belodedici wins it again with Red Star. And Barcelona have to wait until nineteen ninety-two.",
+        "epilogue": "A few months after Seville, a rare blood disorder ends his career at the top. He was twenty-seven. Helmuth Duckadam died in twenty twenty-four. For Romania… he remains the Hero of Seville.",
+        "cta": "Every day, a match that changed everything. Follow for more."
+      },
+      "voice": {
+        "voice_id": "eQ3CIG9xw3bKocVQVkg2",
+        "voice_name": "Adrian - Cinematic History Storyteller"
+      }
+    }
+  }
+}
