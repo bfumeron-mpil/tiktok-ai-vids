@@ -1,0 +1,1232 @@
+{
+  "brand": {
+    "a": "0,11",
+    "b": "xG"
+  },
+  "meta": {
+    "slug": "ep003-hambourg-juventus-1983",
+    "epLabel": "JOUR 3/365 · HAMBOURG – JUVENTUS · 1983",
+    "date": "1983-05-25",
+    "publishDate": "2026-11-27",
+    "final": [
+      0,
+      1
+    ],
+    "archive": "ARCHIVE",
+    "archiveNo": "N°003",
+    "factcheck": {
+      "statut": "validé",
+      "date": "2026-11-23",
+      "par": "xg-recherche",
+      "fiche": "episodes/fiches/ep003-hambourg-juventus-1983.md",
+      "grille": "episodes/fiches/ep003-hambourg-juventus-1983.factcheck.md"
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/1983_European_Cup_final",
+      "https://uefa.com/uefachampionsleague/news/00a1-0e6a0ac0571c-8d8943df8967-1000--1982-83-magath-thunderbolt-downs-juve"
+    ]
+  },
+  "style": {
+    "fog": 0.14,
+    "bpm": 116,
+    "towers": false
+  },
+  "teams": {
+    "A": {
+      "name": "Juventus",
+      "short": "JUV",
+      "color": "#ECE8DE",
+      "rim": "#C9C9C9"
+    },
+    "B": {
+      "name": "Hambourg",
+      "short": "HSV",
+      "color": "#1F5FAE",
+      "rim": "#7FB2FF"
+    }
+  },
+  "players": [
+    {
+      "id": "H1",
+      "team": "B",
+      "name": "Stein",
+      "pos": [
+        -50,
+        0
+      ]
+    },
+    {
+      "id": "H2",
+      "team": "B",
+      "name": "Kaltz",
+      "pos": [
+        -30,
+        -15
+      ]
+    },
+    {
+      "id": "H3",
+      "team": "B",
+      "name": "Hieronymus",
+      "pos": [
+        -33,
+        -5
+      ]
+    },
+    {
+      "id": "H4",
+      "team": "B",
+      "name": "Jakobs",
+      "pos": [
+        -33,
+        5
+      ]
+    },
+    {
+      "id": "H5",
+      "team": "B",
+      "name": "Wehmeyer",
+      "pos": [
+        -30,
+        15
+      ]
+    },
+    {
+      "id": "H6",
+      "team": "B",
+      "name": "Rolff",
+      "pos": [
+        4.4,
+        0
+      ]
+    },
+    {
+      "id": "H7",
+      "team": "B",
+      "name": "Groh",
+      "pos": [
+        -12,
+        10
+      ]
+    },
+    {
+      "id": "H8",
+      "team": "B",
+      "name": "Magath",
+      "pos": [
+        -10,
+        -6
+      ]
+    },
+    {
+      "id": "H9",
+      "team": "B",
+      "name": "Milewski",
+      "pos": [
+        -4,
+        16
+      ]
+    },
+    {
+      "id": "H10",
+      "team": "B",
+      "name": "Bastrup",
+      "pos": [
+        8,
+        -12
+      ]
+    },
+    {
+      "id": "H11",
+      "team": "B",
+      "name": "Hrubesch",
+      "pos": [
+        10,
+        6
+      ]
+    },
+    {
+      "id": "J1",
+      "team": "A",
+      "name": "Zoff",
+      "pos": [
+        50.5,
+        0
+      ]
+    },
+    {
+      "id": "J2",
+      "team": "A",
+      "name": "Gentile",
+      "pos": [
+        34,
+        -14
+      ]
+    },
+    {
+      "id": "J3",
+      "team": "A",
+      "name": "Brio",
+      "pos": [
+        37,
+        -4
+      ]
+    },
+    {
+      "id": "J4",
+      "team": "A",
+      "name": "Scirea",
+      "pos": [
+        42,
+        0
+      ]
+    },
+    {
+      "id": "J5",
+      "team": "A",
+      "name": "Cabrini",
+      "pos": [
+        34,
+        14
+      ]
+    },
+    {
+      "id": "J6",
+      "team": "A",
+      "name": "Bonini",
+      "pos": [
+        22,
+        -8
+      ]
+    },
+    {
+      "id": "J7",
+      "team": "A",
+      "name": "Platini",
+      "pos": [
+        6,
+        0
+      ]
+    },
+    {
+      "id": "J8",
+      "team": "A",
+      "name": "Tardelli",
+      "pos": [
+        22,
+        6
+      ]
+    },
+    {
+      "id": "J9",
+      "team": "A",
+      "name": "Boniek",
+      "pos": [
+        12,
+        14
+      ]
+    },
+    {
+      "id": "J10",
+      "team": "A",
+      "name": "Bettega",
+      "pos": [
+        -16,
+        8
+      ]
+    },
+    {
+      "id": "J11",
+      "team": "A",
+      "name": "Rossi",
+      "pos": [
+        -18,
+        -3
+      ]
+    }
+  ],
+  "hook": {
+    "kicker": "25 MAI 1983 · ATHÈNES",
+    "title": "La Juve de Platini et de *six champions du monde.* En face, Hambourg. *Une frappe* va tout renverser."
+  },
+  "context": {
+    "kicker": "LE CONTEXTE",
+    "footerDur": 2.6,
+    "cards": [
+      {
+        "team": "A",
+        "name": "JUVENTUS",
+        "tag": "LA GRANDE FAVORITE",
+        "text": "*Six champions du monde 1982*, plus Platini et Boniek. Mais cette coupe, *jamais gagnée.*"
+      },
+      {
+        "team": "B",
+        "name": "HAMBOURG",
+        "tag": "DEUX FINALES PERDUES",
+        "text": "Battu en finale européenne en *1980*, puis en *1982*. Mais champion d'Allemagne *sous Happel.*"
+      },
+      {
+        "team": "X",
+        "name": "L'ANGLETERRE",
+        "tag": "SIX ANS DE RÈGNE",
+        "text": "Liverpool, Forest, Aston Villa : depuis *1977*, la coupe ne quitte plus *l'Angleterre.*"
+      }
+    ],
+    "footer": "À Athènes, Ernst Happel a *un plan.*"
+  },
+  "keyPlayersKicker": "LES JOUEURS CLÉS",
+  "keyPlayers": [
+    {
+      "id": "H8",
+      "name": "MAGATH",
+      "num": "",
+      "role": "LE MILIEU",
+      "line": "5e du Ballon d'Or 1983. Ce soir, *une seule frappe* suffira."
+    },
+    {
+      "id": "H6",
+      "name": "ROLFF",
+      "num": "",
+      "role": "L'OMBRE",
+      "line": "Sa mission, ce soir : *ne jamais lâcher Platini.*"
+    },
+    {
+      "id": "J7",
+      "name": "PLATINI",
+      "num": "",
+      "role": "LE GÉNIE",
+      "line": "Meilleur buteur de Serie A. Fin 1983, il sera *Ballon d'Or.*"
+    }
+  ],
+  "tactic": {
+    "kicker": "LE PLAN HAPPEL",
+    "cam": {
+      "eye": [
+        [
+          0,
+          [
+            -22,
+            34,
+            -26
+          ]
+        ],
+        [
+          13,
+          [
+            -14,
+            28,
+            -22
+          ]
+        ]
+      ],
+      "target": [
+        [
+          0,
+          [
+            8,
+            0,
+            -2
+          ]
+        ],
+        [
+          13,
+          [
+            10,
+            0,
+            -2
+          ]
+        ]
+      ],
+      "fov": 44
+    },
+    "focus": [
+      [
+        0,
+        null
+      ],
+      [
+        3.2,
+        "J7"
+      ],
+      [
+        9.7,
+        "H8"
+      ]
+    ],
+    "moves": {
+      "J7": [
+        [
+          0,
+          [
+            6,
+            0
+          ]
+        ],
+        [
+          2.5,
+          [
+            6,
+            0
+          ]
+        ],
+        [
+          4.5,
+          [
+            12,
+            -8
+          ]
+        ],
+        [
+          6.5,
+          [
+            4,
+            -12
+          ]
+        ],
+        [
+          8.5,
+          [
+            10,
+            6
+          ]
+        ],
+        [
+          10.5,
+          [
+            16,
+            2
+          ]
+        ],
+        [
+          13,
+          [
+            14,
+            -3
+          ]
+        ]
+      ],
+      "H6": [
+        [
+          0,
+          [
+            4.4,
+            0
+          ]
+        ],
+        [
+          2.85,
+          [
+            4.4,
+            0
+          ]
+        ],
+        [
+          4.85,
+          [
+            10.4,
+            -8
+          ]
+        ],
+        [
+          6.85,
+          [
+            2.4,
+            -12
+          ]
+        ],
+        [
+          8.85,
+          [
+            8.4,
+            6
+          ]
+        ],
+        [
+          10.85,
+          [
+            14.4,
+            2
+          ]
+        ],
+        [
+          13,
+          [
+            12.4,
+            -3
+          ]
+        ]
+      ],
+      "H8": [
+        [
+          0,
+          [
+            -10,
+            -6
+          ]
+        ],
+        [
+          9.6,
+          [
+            -10,
+            -6
+          ]
+        ],
+        [
+          12.9,
+          [
+            4,
+            -8
+          ]
+        ]
+      ]
+    },
+    "graphics": [
+      {
+        "type": "link",
+        "a": "H6",
+        "b": "J7",
+        "t0": 3.4,
+        "t1": 9.5
+      },
+      {
+        "type": "arrow",
+        "from": [
+          -9,
+          -6
+        ],
+        "to": [
+          16,
+          -9
+        ],
+        "bend": 0.06,
+        "t0": 9.8,
+        "t1": 12.9,
+        "grow": 0.9,
+        "color": "#F2C14E",
+        "w": 0.2
+      }
+    ],
+    "labels": [],
+    "beats": [
+      {
+        "t0": 0.2,
+        "t1": 3.1,
+        "text": "Ernst Happel a déjà gagné cette coupe, *avec Feyenoord.*"
+      },
+      {
+        "t0": 3.2,
+        "t1": 6.2,
+        "text": "Sa consigne : Rolff colle à Platini. *Partout.*"
+      },
+      {
+        "t0": 6.3,
+        "t1": 9.6,
+        "text": "Privée de son génie, la Juve *tourne à vide.*"
+      },
+      {
+        "t0": 9.7,
+        "t1": 12.9,
+        "text": "Et Hambourg attend *son moment.*"
+      }
+    ]
+  },
+  "goals": {
+    "kicker": "LE BUT",
+    "sequences": [
+      {
+        "d": 5.2,
+        "goalAt": 2.65,
+        "focus": "H8",
+        "kicker": "LE BUT · MAGATH",
+        "text": "Magath arme… une frappe *de loin.* Zoff est *battu.*",
+        "cam": {
+          "fov": 42,
+          "eye": [
+            [
+              0,
+              [
+                6,
+                11,
+                -19
+              ]
+            ],
+            [
+              1.8,
+              [
+                12,
+                9,
+                -16
+              ]
+            ],
+            [
+              2.6,
+              [
+                22,
+                8,
+                -12
+              ]
+            ],
+            [
+              5.2,
+              [
+                25,
+                7.5,
+                -11
+              ]
+            ]
+          ],
+          "target": [
+            [
+              0,
+              [
+                24,
+                0.5,
+                -6
+              ]
+            ],
+            [
+              1.8,
+              [
+                34,
+                0.8,
+                -3
+              ]
+            ],
+            [
+              2.6,
+              [
+                48,
+                1.2,
+                1.5
+              ]
+            ],
+            [
+              5.2,
+              [
+                50,
+                1.2,
+                2
+              ]
+            ]
+          ]
+        },
+        "moves": {
+          "H8": [
+            [
+              0,
+              [
+                20,
+                -9
+              ]
+            ],
+            [
+              1.2,
+              [
+                24,
+                -7
+              ]
+            ],
+            [
+              2.0,
+              [
+                26.5,
+                -6.5
+              ]
+            ],
+            [
+              5.2,
+              [
+                28,
+                -6
+              ]
+            ]
+          ],
+          "J8": [
+            [
+              0,
+              [
+                28,
+                -1
+              ]
+            ],
+            [
+              2.0,
+              [
+                28.5,
+                -3.6
+              ]
+            ],
+            [
+              5.2,
+              [
+                29,
+                -4
+              ]
+            ]
+          ],
+          "J6": [
+            [
+              0,
+              [
+                31,
+                -4
+              ]
+            ],
+            [
+              2.0,
+              [
+                30,
+                -3
+              ]
+            ],
+            [
+              5.2,
+              [
+                30,
+                -3
+              ]
+            ]
+          ],
+          "H11": [
+            [
+              0,
+              [
+                33,
+                4
+              ]
+            ],
+            [
+              5.2,
+              [
+                37,
+                3
+              ]
+            ]
+          ],
+          "H10": [
+            [
+              0,
+              [
+                31,
+                -14
+              ]
+            ],
+            [
+              5.2,
+              [
+                35,
+                -12
+              ]
+            ]
+          ],
+          "J1": [
+            [
+              0,
+              [
+                50.5,
+                0
+              ]
+            ],
+            [
+              2.1,
+              [
+                50.5,
+                -0.5
+              ]
+            ],
+            [
+              2.6,
+              [
+                50.8,
+                1.6
+              ]
+            ],
+            [
+              5.2,
+              [
+                50.8,
+                1.8
+              ]
+            ]
+          ]
+        },
+        "heights": {
+          "J1": [
+            [
+              0,
+              1.9
+            ],
+            [
+              2.2,
+              1.9
+            ],
+            [
+              2.55,
+              0.8
+            ],
+            [
+              3.6,
+              0.75
+            ],
+            [
+              4.6,
+              1.9
+            ]
+          ]
+        },
+        "ball": [
+          [
+            0,
+            [
+              19.6,
+              0.12,
+              -8.6
+            ]
+          ],
+          [
+            1.2,
+            [
+              23.6,
+              0.12,
+              -6.8
+            ]
+          ],
+          [
+            1.95,
+            [
+              26.3,
+              0.12,
+              -6.2
+            ]
+          ],
+          [
+            2.0,
+            [
+              26.5,
+              0.3,
+              -6.1
+            ]
+          ],
+          [
+            2.65,
+            [
+              52.3,
+              2.1,
+              2.9
+            ]
+          ],
+          [
+            3.0,
+            [
+              53.4,
+              1.4,
+              2.9
+            ]
+          ],
+          [
+            5.2,
+            [
+              54.0,
+              0.15,
+              2.9
+            ]
+          ]
+        ]
+      }
+    ],
+    "recap": {
+      "step": 0.35,
+      "slamAt": 1.5,
+      "caption": "FINALE · ATHÈNES 1983",
+      "sub": "Sixième finale de suite *gagnée 1-0.* Hambourg est *champion d'Europe.*"
+    },
+    "ticker": [
+      {
+        "at": 2.65,
+        "who": "MAGATH · BUT",
+        "team": "A",
+        "score": [
+          0,
+          1
+        ]
+      },
+      {
+        "at": 99,
+        "who": "COUP DE SIFFLET FINAL",
+        "team": "B",
+        "score": [
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "reach": {
+    "kicker": "LA PORTÉE",
+    "intro": 1.2,
+    "title": "Un 1-0 qui *résonne* bien au-delà d'Athènes.",
+    "items": [
+      {
+        "year": "1983",
+        "title": "DEUX CLUBS, UN COACH",
+        "text": "Happel devient le premier entraîneur sacré *avec deux clubs* : Feyenoord, puis Hambourg."
+      },
+      {
+        "year": "1985",
+        "title": "TROIS BALLONS D'OR",
+        "text": "Platini enchaîne *1983, 84, 85.* Et la Juve gagne enfin la coupe : au Heysel, *un soir de deuil.*"
+      },
+      {
+        "year": "1992",
+        "title": "UN STADE À SON NOM",
+        "text": "À la mort de Happel, le stade du Prater devient *l'Ernst-Happel-Stadion.*"
+      },
+      {
+        "year": "2013",
+        "title": "LE RECORD TOMBE",
+        "text": "*36 matchs* de Bundesliga sans défaite : le record du HSV a tenu *plus de 30 ans.*"
+      }
+    ]
+  },
+  "epilogue": {
+    "kicker": "L'ÉPILOGUE",
+    "beats": [
+      {
+        "big": "1983",
+        "fx": "lightsout",
+        "text": "Hambourg ne regagnera *plus jamais* la Coupe des champions."
+      },
+      {
+        "big": "2018",
+        "fx": "rain",
+        "text": "Le « Dino », présent dans toutes les saisons de Bundesliga, *descend pour la première fois.*"
+      },
+      {
+        "fx": "final",
+        "text": "L'horloge du stade affiche *54 ans et 260 jours.* Mais à Athènes, une frappe reste *éternelle.*"
+      }
+    ]
+  },
+  "cta": {
+    "line": "Chaque jour, un match qui a *tout changé.*",
+    "button": "ABONNE-TOI",
+    "next": "Demain : le Boca de Riquelme face au Real",
+    "tagline": "Le football improbable, expliqué."
+  },
+  "voiceover": {
+    "hook": "Vingt-cinq mai mille neuf cent quatre-vingt-trois. Athènes. La Juventus de Platini… et de six champions du monde. En face, Hambourg. Et une seule frappe va tout renverser.",
+    "context": "La Juve est la grande favorite. Mais cette coupe-là, elle ne l'a jamais gagnée. Hambourg, lui, a perdu deux finales européennes en trois ans. Et depuis six ans, la coupe ne quitte plus l'Angleterre. À Athènes, Ernst Happel a un plan.",
+    "players": "Magath, le milieu qui frappe de loin. Rolff, l'ombre. Et Platini, meilleur buteur d'Italie et futur Ballon d'Or.",
+    "tactic": "Happel a déjà gagné cette coupe avec Feyenoord. Sa consigne : Rolff colle à Platini. Partout. Privée de son génie, la Juve tourne à vide. Et Hambourg attend son moment.",
+    "goals": "Il arrive très vite. Magath arme… une frappe de loin… Zoff est battu. La Juve pousse, mais ne reviendra jamais. Un à zéro.",
+    "reach": "Happel devient le premier entraîneur sacré avec deux clubs. Platini enchaîne trois Ballons d'Or, et la Juve gagnera enfin la coupe… un soir de deuil, au Heysel. À la mort de Happel, Vienne donne son nom à son stade. Et l'invincibilité du HSV restera un record pendant plus de trente ans.",
+    "epilogue": "Hambourg ne regagnera plus jamais la coupe. En deux mille dix-huit, le Dino, présent dans toutes les saisons de Bundesliga, descend pour la première fois. L'horloge du stade affiche cinquante-quatre ans. Mais à Athènes… une frappe reste éternelle.",
+    "cta": "Chaque jour, un match qui a tout changé. Abonne-toi."
+  },
+  "voice": {
+    "engine": "elevenlabs",
+    "model": "eleven_v4",
+    "voice_id": "3BZLNrQEzQVYs6kPOW4S",
+    "voice_name": "Justin Doré - Documentary Narrator",
+    "style": "aucun",
+    "lead": 0.3,
+    "tail": 0.6,
+    "statut": "à générer (quota ElevenLabs épuisé)"
+  },
+  "timeline": {
+    "hook": [
+      0,
+      12.3
+    ],
+    "context": [
+      12.3,
+      28.73
+    ],
+    "players": [
+      28.73,
+      37.1
+    ],
+    "tactic": [
+      37.1,
+      50.1
+    ],
+    "goals": [
+      50.1,
+      60.3
+    ],
+    "reach": [
+      60.3,
+      80.33
+    ],
+    "epilogue": [
+      80.33,
+      97.7
+    ],
+    "cta": [
+      97.7,
+      102.07
+    ]
+  },
+  "nominal": {
+    "hook": 5,
+    "context": 12.5,
+    "players": 7.5,
+    "tactic": 13,
+    "goals": 10.2,
+    "reach": 15.6,
+    "epilogue": 11.4,
+    "cta": 3.5
+  },
+  "chapters": [
+    {
+      "label": "CONTEXTE",
+      "t0": 12.3,
+      "t1": 28.73
+    },
+    {
+      "label": "JOUEURS",
+      "t0": 28.73,
+      "t1": 37.1
+    },
+    {
+      "label": "TACTIQUE",
+      "t0": 37.1,
+      "t1": 50.1
+    },
+    {
+      "label": "LE BUT",
+      "t0": 50.1,
+      "t1": 60.3
+    },
+    {
+      "label": "PORTÉE",
+      "t0": 60.3,
+      "t1": 80.33
+    },
+    {
+      "label": "ÉPILOGUE",
+      "t0": 80.33,
+      "t1": 97.7
+    }
+  ],
+  "i18n": {
+    "en": {
+      "brand": {
+        "a": "0.11",
+        "b": "xG"
+      },
+      "meta": {
+        "epLabel": "DAY 3/365 · HAMBURG – JUVENTUS · 1983",
+        "archive": "ARCHIVE"
+      },
+      "teams": {
+        "A": {
+          "name": "Juventus"
+        },
+        "B": {
+          "name": "Hamburg"
+        }
+      },
+      "chapters": [
+        {
+          "label": "CONTEXT",
+          "t0": 13.69,
+          "t1": 29.73
+        },
+        {
+          "label": "PLAYERS",
+          "t0": 29.73,
+          "t1": 40.06
+        },
+        {
+          "label": "TACTICS",
+          "t0": 40.06,
+          "t1": 53.06
+        },
+        {
+          "label": "THE GOAL",
+          "t0": 53.06,
+          "t1": 63.26
+        },
+        {
+          "label": "RIPPLE",
+          "t0": 63.26,
+          "t1": 84.73
+        },
+        {
+          "label": "EPILOGUE",
+          "t0": 84.73,
+          "t1": 100.91
+        }
+      ],
+      "hook": {
+        "kicker": "25 MAY 1983 · ATHENS",
+        "title": "Platini's Juve, with *six world champions.* Facing them, Hamburg. *One shot* turns it all upside down."
+      },
+      "context": {
+        "kicker": "THE CONTEXT",
+        "cards": [
+          {
+            "name": "JUVENTUS",
+            "tag": "THE BIG FAVOURITES",
+            "text": "*Six 1982 world champions*, plus Platini and Boniek. But this cup? *Never won.*"
+          },
+          {
+            "name": "HAMBURG",
+            "tag": "TWO LOST FINALS",
+            "text": "Beaten in European finals in *1980*, then in *1982*. But German champions *under Happel.*"
+          },
+          {
+            "name": "ENGLAND",
+            "tag": "A SIX-YEAR REIGN",
+            "text": "Liverpool, Forest, Aston Villa: since *1977*, the cup hasn't left *England.*"
+          }
+        ],
+        "footer": "In Athens, Ernst Happel has *a plan.*"
+      },
+      "keyPlayersKicker": "THE KEY PLAYERS",
+      "keyPlayers": [
+        {
+          "role": "THE MIDFIELDER",
+          "line": "5th in the 1983 Ballon d'Or. Tonight, *one shot* is enough."
+        },
+        {
+          "role": "THE SHADOW",
+          "line": "His mission tonight: *never let Platini go.*"
+        },
+        {
+          "role": "THE GENIUS",
+          "line": "Serie A's top scorer. By the end of 1983, he'll win the *Ballon d'Or.*"
+        }
+      ],
+      "tactic": {
+        "kicker": "HAPPEL'S PLAN",
+        "beats": [
+          {
+            "text": "Ernst Happel has already won this cup, *with Feyenoord.*"
+          },
+          {
+            "text": "His order: Rolff sticks to Platini. *Everywhere.*"
+          },
+          {
+            "text": "Without its genius, Juve *run on empty.*"
+          },
+          {
+            "text": "And Hamburg wait for *their moment.*"
+          }
+        ]
+      },
+      "goals": {
+        "kicker": "THE GOAL",
+        "sequences": [
+          {
+            "kicker": "THE GOAL · MAGATH",
+            "text": "Magath winds up… a shot *from distance.* Zoff is *beaten.*"
+          }
+        ],
+        "recap": {
+          "caption": "FINAL · ATHENS 1983",
+          "sub": "A sixth straight final *won 1-0.* Hamburg are *champions of Europe.*"
+        },
+        "ticker": [
+          {
+            "who": "MAGATH · GOAL"
+          },
+          {
+            "who": "FULL TIME"
+          }
+        ]
+      },
+      "reach": {
+        "kicker": "THE RIPPLE EFFECT",
+        "title": "A 1-0 that *echoes* far beyond Athens.",
+        "items": [
+          {
+            "title": "TWO CLUBS, ONE COACH",
+            "text": "Happel becomes the first coach to win it *with two clubs*: Feyenoord, then Hamburg."
+          },
+          {
+            "title": "THREE BALLONS D'OR",
+            "text": "Platini wins *1983, 84, 85.* And Juve finally lift the cup: at Heysel, *a night of mourning.*"
+          },
+          {
+            "title": "A STADIUM IN HIS NAME",
+            "text": "When Happel dies, the Prater stadium becomes *the Ernst-Happel-Stadion.*"
+          },
+          {
+            "title": "THE RECORD FALLS",
+            "text": "*36 Bundesliga games* unbeaten: Hamburg's record stood for *over 30 years.*"
+          }
+        ]
+      },
+      "epilogue": {
+        "kicker": "THE EPILOGUE",
+        "beats": [
+          {
+            "text": "Hamburg will *never again* win the European Cup."
+          },
+          {
+            "text": "The “Dino”, present in every Bundesliga season, *goes down for the first time.*"
+          },
+          {
+            "text": "The stadium clock reads *54 years and 260 days.* But in Athens, one shot lives *forever.*"
+          }
+        ]
+      },
+      "cta": {
+        "line": "Every day, a match that *changed everything.*",
+        "button": "FOLLOW",
+        "next": "Tomorrow: Riquelme's Boca take on Real Madrid",
+        "tagline": "Improbable football, explained."
+      },
+      "voiceover": {
+        "hook": "May the twenty-fifth, nineteen eighty-three. Athens. Platini's Juventus… with six world champions. Facing them, Hamburg. And a single shot is about to turn everything upside down.",
+        "context": "Juve are the big favourites. But this is the one cup they have never won. Hamburg have lost two European finals in three years. And for six years, the cup has not left England. In Athens, Ernst Happel has a plan.",
+        "players": "Magath, the midfielder who shoots from distance. Rolff, the shadow. And Platini, Italy's top scorer and a future Ballon d'Or winner.",
+        "tactic": "Happel has already won this cup with Feyenoord. His order: Rolff sticks to Platini. Everywhere. Without its genius, Juve run on empty. And Hamburg wait for their moment.",
+        "goals": "It comes early. Magath winds up… a shot from distance… Zoff is beaten. Juve push, but never come back. One-nil.",
+        "reach": "Happel becomes the first coach to win it with two clubs. Platini wins three Ballons d'Or in a row, and Juve finally lift the cup… on a night of mourning, at Heysel. When Happel dies, Vienna names its stadium after him. And Hamburg's unbeaten run stays a record for more than thirty years.",
+        "epilogue": "Hamburg will never win the cup again. In twenty eighteen, the Dino, present in every Bundesliga season, goes down for the first time. The stadium clock reads fifty-four years. But in Athens… one shot lives forever.",
+        "cta": "Every day, a match that changed everything. Follow for more."
+      },
+      "voice": {
+        "voice_id": "eQ3CIG9xw3bKocVQVkg2",
+        "voice_name": "Adrian - Cinematic History Storyteller"
+      },
+      "timeline": {
+        "hook": [
+          0,
+          13.69
+        ],
+        "context": [
+          13.69,
+          29.73
+        ],
+        "players": [
+          29.73,
+          40.06
+        ],
+        "tactic": [
+          40.06,
+          53.06
+        ],
+        "goals": [
+          53.06,
+          63.26
+        ],
+        "reach": [
+          63.26,
+          84.73
+        ],
+        "epilogue": [
+          84.73,
+          100.91
+        ],
+        "cta": [
+          100.91,
+          106.1
+        ]
+      }
+    }
+  }
+}
