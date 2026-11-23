@@ -5,7 +5,7 @@ description: Écrit le script à l'écran d'un épisode 0,11 xG de 60 s à parti
 
 # xg-script — 65–75 secondes, toujours la même structure, en FR et en EN
 
-## Le ton 0,11 xG
+## Le ton 0,11 xG (détail complet : `docs/identite.md`)
 Un conteur passionné qui explique : pédagogique, inspirant, jamais professoral.
 - Tutoiement du spectateur dans les CTA, narration au présent (« Puskás frappe »).
 - Phrases courtes. Une idée par phrase. Des chiffres concrets plutôt que des adjectifs.

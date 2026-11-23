@@ -35,10 +35,20 @@ Voix : homme ou femme, 25-40 ans, conteur chaleureux, rythme vif, sourire dans l
 Prononciation : Puskás = « Pouch-kâch », Hidegkuti = « Hi-dég-kou-ti », Bozsik = « Bo-jik ».
 
 ## Sources
-- https://en.wikipedia.org/wiki/England_v_Hungary_(1953) — déroulé, buts, contexte
-- https://www.11v11.com/matches/england-v-hungary-25-november-1953-226293/ — compositions, buteurs
-- https://www.uefa.com/news/0253-0d7f0d009fab-8e2136c12d60-1000--men-from-mars-become-magical-magyars — contexte, invincibilité
-- https://en.wikipedia.org/wiki/Hungary_v_England_(1954) — revanche 7-1, record de défaite
+- S1 https://en.wikipedia.org/wiki/England_v_Hungary_(1953) — date, lieu, buts et ordre, WM anglais, 3-2-3-2 hongrois, Hidegkuti avant-centre reculé, Bozsik milieu reculé, volée du triplé
+- S2 https://www.11v11.com/matches/england-v-hungary-25-november-1953-226293/ — score, buteurs, compositions, 100 000 spectateurs
+- S3 https://www.uefa.com/news/0253-0d7f0d009fab-8e2136c12d60-1000--men-from-mars-become-magical-magyars — champions olympiques, invaincus près de 4 ans, WM de Winterbottom, 3-1 mi-première période
+- S4 https://en.wikipedia.org/wiki/Hungary_v_England_(1954) — 7-1 à Budapest, pire défaite anglaise, première défaite à domicile face à une équipe hors îles Britanniques
+- S5 https://rsssf.org/rssbest/enghong.html — compositions et numéros (Johnston n°5, Wright n°4), but dans la 1re minute
+- S6 https://uefa.com/uefaeuro/history/news/0253-0d8026b8531a-6be6e23436d1-1000--the-greatest-teams-of-all-time-hungary-1950-56 — Hidegkuti attire les défenseurs, espace pour Puskás et Kocsis, triplé
+- S7 https://en.wikipedia.org/wiki/Golden_Team — « match du siècle » dans la presse, demi-centre qui suit l'avant-centre reculé, 105 000 spectateurs, 7-1
+- S8 https://en.wikipedia.org/wiki/N%C3%A1ndor_Hidegkuti — WM majoritaire, le demi-centre marque l'avant-centre, triplé à Wembley
+- S9 https://en.wikipedia.org/wiki/Alf_Ramsey — sélectionneur 1963-1974, vainqueur du Mondial 1966
+- S10 https://www.uefa.com/european-qualifiers/news/019c-0e6adb9ff180-9b81c048a9b2-1000--1966-ramsey-s-vision-for-england — Ramsey, Mondial 1966
+- S11 https://www.si.com/soccer/2019/06/17/sir-alf-ramsey-man-behind-wingless-wonders-englands-sole-world-cup-triumph — Ramsey titulaire le 25/11/1953, Mondial 1966
+- S12 https://www.redbull.com/int-en/hungary-footballs-first-disruptors — Hidegkuti porte le 9 et décroche
 
 ## Points incertains
-- « 35 tirs contre 5 » : chiffre très repris mais statistique d'époque non officielle → à formuler « environ 35 tirs ».
+- « 35 tirs contre 5 » : une seule source → retiré de l'écran.
+- Minute du 1er but : 1re minute / 60 s / 90 s selon les sources → « même pas deux minutes ».
+- Pied de la frappe de Puskás : non confirmé par 2 sources → retiré.

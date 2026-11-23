@@ -35,6 +35,16 @@ Un compte d'histoire du foot vit de sa crédibilité : une erreur de buteur en c
 4. Ne jamais copier de phrases des sources : reformuler entièrement.
 5. Mettre à jour `statut` du match dans `data/matchs_candidats.tsv` : `vérifié` ou `rejeté` (+ raison).
 
+## Fact-check de l'épisode (étape bloquante, à refaire après toute modification de texte)
+1. Numéroter les sources de la fiche : S1, S2, …
+2. `python3 tools/factcheck.py extraire episodes/<slug>.json` → grille `episodes/fiches/<slug>.factcheck.md`
+   (chaque phrase FR et EN côte à côte, voix off comprise).
+3. Pour chaque ligne : sources (≥ 2 par fait ; « — » pour une ligne de pur style) et statut ✅, ✏️ (reformulée dans
+   le JSON) ou ❌ (fausse → corriger le JSON, réextraire). FR et EN doivent affirmer exactement la même chose.
+4. Pièges fréquents : minutes qui divergent (ne pas les afficher), superlatifs (« jamais », « record », « le meilleur »),
+   pied de frappe, statistiques d'époque (tirs, possession), affluences (arrondir), citations (vérifier l'auteur).
+5. `python3 tools/factcheck.py valider episodes/<slug>.json` → écrit `meta.factcheck.statut = "validé"`.
+
 ## Positions pour la 3D
 Repère du moteur : terrain 105 × 68 m, x ∈ [-52,5 ; 52,5] (longueur), z ∈ [-34 ; 34] (largeur).
 L'équipe « A » (celle dont on raconte l'exploit) attaque vers x = +52,5. Donner des positions plausibles

@@ -21,6 +21,12 @@ const LANG = arg('--lang') || 'fr';
 const EP = LANG === 'fr' ? RAW : merge(RAW, (RAW.i18n || {})[LANG] || (() => { throw new Error(`pas de surcouche i18n.${LANG}`); })());
 delete EP.i18n;
 fs.mkdirSync(outDir, { recursive: true });
+// Garde-fou : pas de rendu final sans fiche fact-checkée (meta.factcheck.statut = "validé"), sauf --brouillon ou --frames
+const fc = (EP.meta && EP.meta.factcheck) || {};
+if (!rest.includes('--brouillon') && !arg('--frames') && fc.statut !== 'validé') {
+  console.error(`REFUS : fact-check non validé pour ${EP.meta?.slug} (meta.factcheck.statut = "${fc.statut || 'absent'}"). Lancer le skill xg-recherche, ou --brouillon pour un essai.`);
+  process.exit(2);
+}
 
 const browser = await chromium.launch({ executablePath: process.env.CHROME || '/usr/bin/google-chrome', args: ['--disable-gpu-vsync'] });
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });

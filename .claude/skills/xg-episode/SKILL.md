@@ -20,6 +20,8 @@ du calendrier sans vidéo dans `out/`.
      `python3 tools/calendrier.py` pour la placer.
 2. **Fiche match vérifiée** → skill **xg-recherche**. Sortie : `episodes/fiches/<slug>.md`.
    Bloquant : aucun fait non sourcé ne passe à l'étape suivante.
+4 bis. **Fact-check bloquant** (après le script FR + EN) : `python3 tools/factcheck.py extraire …`, remplir chaque
+   ligne (2 sources, ✅/✏️), puis `python3 tools/factcheck.py valider …`. Sans « VALIDÉ », `render.mjs` refuse le rendu.
 3. **Script 60 s** → skill **xg-script**. Sortie : textes de chaque scène, dans le budget de mots.
 4. **Storyboard 3D** → skill **xg-storyboard-3d**. Sortie : `episodes/<slug>.json` (schéma décrit dans ce skill).
    Point de départ : copier `episodes/ep001-angleterre-hongrie-1953.json`.
@@ -32,6 +34,7 @@ du calendrier sans vidéo dans `out/`.
    calendrier (« Demain : … »). Si le lendemain est vide, écrire un teaser générique et le signaler.
 
 ## Règles de la série
+- Identité, ton et DA « Nuit d'archive » : `docs/identite.md` (à relire avant chaque script).
 - Nom du compte : **0,11 xG** (« 0,11 » blanc, « xG » or #F2C14E). Compteur `JOUR n/365` en haut à gauche.
 - Un épisode par jour pendant 365 jours, à partir du 25/11/2026 (J1 = Angleterre 3-6 Hongrie, 73e anniversaire).
 - Publication le jour anniversaire du match chaque fois que possible (« il y a N ans, jour pour jour »).

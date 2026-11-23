@@ -12,7 +12,16 @@
       "https://www.11v11.com/matches/england-v-hungary-25-november-1953-226293/",
       "https://www.uefa.com/news/0253-0d7f0d009fab-8e2136c12d60-1000--men-from-mars-become-magical-magyars"
     ],
-    "publishDate": "2026-11-25"
+    "publishDate": "2026-11-25",
+    "archive": "ARCHIVE",
+    "archiveNo": "N°001",
+    "factcheck": {
+      "statut": "validé",
+      "date": "2026-11-23",
+      "par": "xg-recherche",
+      "fiche": "episodes/fiches/ep001-angleterre-hongrie-1953.md",
+      "grille": "episodes/fiches/ep001-angleterre-hongrie-1953.factcheck.md"
+    }
   },
   "style": {
     "fog": 0.1
@@ -303,8 +312,8 @@
       {
         "team": "B",
         "name": "ANGLETERRE",
-        "tag": "LES INVENTEURS DU JEU",
-        "text": "Invaincus à domicile face au continent. Ils jouent en *WM*, le système roi depuis les années 1930."
+        "tag": "LA RÉFÉRENCE",
+        "text": "Invaincus à domicile face au continent. Ils jouent en *WM*, le système dominant de l'époque."
       },
       {
         "team": "A",
@@ -321,22 +330,22 @@
       "id": "H10",
       "name": "PUSKÁS",
       "num": "10",
-      "role": "CAPITAINE · PIED GAUCHE",
-      "line": "Le meilleur buteur de son époque. Ce soir, il va *humilier* le capitaine anglais."
+      "role": "CAPITAINE",
+      "line": "Le capitaine hongrois. Ce soir, il va *ridiculiser* le capitaine anglais."
     },
     {
       "id": "H9",
       "name": "HIDEGKUTI",
       "num": "9",
       "role": "L'AVANT-CENTRE FANTÔME",
-      "line": "Il porte le 9… mais il ne joue *jamais* là où un 9 doit jouer."
+      "line": "Il porte le 9… mais il *recule*, là où personne ne l'attend."
     },
     {
       "id": "H4",
       "name": "BOZSIK",
       "num": "",
       "role": "LE MÉTRONOME",
-      "line": "Au milieu, il dicte le tempo. Chaque attaque hongroise *passe par lui.*"
+      "line": "Milieu reculé, il *organise le jeu* juste derrière les attaquants."
     }
   ],
   "tactic": {
@@ -716,8 +725,8 @@
         "d": 4.6,
         "goalAt": 2.75,
         "focus": "H9",
-        "kicker": "1re MINUTE",
-        "text": "*Hidegkuti* frappe. 90 secondes, et Wembley est *déjà muet.*",
+        "kicker": "DÈS LE COUP D'ENVOI",
+        "text": "*Hidegkuti* frappe. Même pas deux minutes, et Wembley est *déjà muet.*",
         "cam": {
           "fov": 42,
           "eye": [
@@ -986,7 +995,7 @@
         "goalAt": 2.75,
         "focus": "H10",
         "kicker": "LE RÂTEAU DE PUSKÁS",
-        "text": "Billy Wright glisse… *dans le vide.* Puskás tire du gauche. *Un geste entré dans l'histoire.*",
+        "text": "Billy Wright glisse… *dans le vide.* Puskás frappe. *Un geste entré dans l'histoire.*",
         "cam": {
           "fov": 38,
           "eye": [
@@ -1493,7 +1502,7 @@
       "step": 0.17,
       "slamAt": 1.75,
       "caption": "WEMBLEY · 25.11.1953",
-      "sub": "La Hongrie tire *près de 35 fois* au but. L'Angleterre, *5 fois.*"
+      "sub": "Hidegkuti signe un *triplé.* Puskás, un *doublé.*"
     },
     "ticker": [
       {
@@ -1601,9 +1610,10 @@
     ]
   },
   "cta": {
-    "line": "Le football moderne est né *ce soir-là.*",
+    "line": "Ce soir-là, le football *a changé d'époque.*",
     "button": "ABONNE-TOI",
-    "next": "Demain : le gardien aux 4 penalties"
+    "next": "Demain : le gardien aux 4 penalties",
+    "tagline": "Le football improbable, expliqué."
   },
   "brand": {
     "a": "0,11",
@@ -1621,11 +1631,11 @@
   "voiceover": {
     "hook": "25 novembre 1953. L'Angleterre n'a jamais perdu chez elle contre une équipe du continent.",
     "context": "En face : la Hongrie. Championne olympique, invaincue depuis près de quatre ans. Cent mille personnes attendent le match du siècle.",
-    "players": "Puskás, le capitaine. Hidegkuti, un numéro 9… qui ne joue jamais devant. Et Bozsik, le métronome.",
+    "players": "Puskás, le capitaine. Hidegkuti, un numéro 9… qui recule là où personne ne l'attend. Et Bozsik, qui organise le jeu.",
     "tactic": "À l'époque, chaque numéro marque son numéro. Mais Hidegkuti recule. Si son défenseur le suit, la défense s'ouvre. S'il reste, Hidegkuti est libre. Personne ne sait qui marquer.",
-    "goals": "Résultat : un but dès la première minute. Puis le râteau de Puskás, qui envoie Billy Wright dans le vide. Et Hidegkuti, de volée, pour un triplé. Six à trois.",
+    "goals": "Résultat : un but en moins de deux minutes. Puis le râteau de Puskás, qui envoie Billy Wright dans le vide. Et Hidegkuti, de volée, pour un triplé. Six à trois.",
     "legacy": "Six mois plus tard, à Budapest : sept à un. Et sur la pelouse ce soir-là, un certain Alf Ramsey… futur champion du monde.",
-    "cta": "Le football moderne est né ce soir-là. Abonne-toi."
+    "cta": "Ce soir-là, le football a changé d'époque. Abonne-toi."
   },
   "voice": {
     "engine": "piper",
@@ -1641,7 +1651,8 @@
         "b": "xG"
       },
       "meta": {
-        "epLabel": "DAY 1/365 · ENGLAND – HUNGARY · 1953"
+        "epLabel": "DAY 1/365 · ENGLAND – HUNGARY · 1953",
+        "archive": "ARCHIVE"
       },
       "teams": {
         "A": {
@@ -1679,8 +1690,8 @@
         "cards": [
           {
             "name": "ENGLAND",
-            "tag": "THE INVENTORS OF THE GAME",
-            "text": "Unbeaten at home against the continent. They play the *WM*, the dominant system since the 1930s."
+            "tag": "THE BENCHMARK",
+            "text": "Unbeaten at home against the continent. They play the *WM*, the dominant system of the day."
           },
           {
             "name": "HUNGARY",
@@ -1693,16 +1704,16 @@
       "keyPlayersKicker": "THE KEY PLAYERS",
       "keyPlayers": [
         {
-          "role": "CAPTAIN · LEFT FOOT",
-          "line": "The deadliest striker of his era. Tonight, he'll *humiliate* England's captain."
+          "role": "CAPTAIN",
+          "line": "Hungary's captain. Tonight, he'll make England's captain *look foolish.*"
         },
         {
           "role": "THE PHANTOM CENTRE-FORWARD",
-          "line": "He wears the 9… but *never* plays where a 9 is supposed to."
+          "line": "He wears the 9… but he *drops deep*, where nobody expects him."
         },
         {
           "role": "THE METRONOME",
-          "line": "He sets the tempo in midfield. Every Hungarian attack *goes through him.*"
+          "line": "A deep-lying midfielder, he *runs the game* right behind the forwards."
         }
       ],
       "tactic": {
@@ -1737,12 +1748,12 @@
         "kicker": "THE GOALS",
         "sequences": [
           {
-            "kicker": "1st MINUTE",
-            "text": "*Hidegkuti* shoots. 90 seconds in, and Wembley is *already silent.*"
+            "kicker": "STRAIGHT FROM KICK-OFF",
+            "text": "*Hidegkuti* shoots. Not even two minutes in, and Wembley is *already silent.*"
           },
           {
             "kicker": "PUSKÁS' DRAG-BACK",
-            "text": "Billy Wright slides… *into thin air.* Puskás fires with his left. *A moment for the history books.*"
+            "text": "Billy Wright slides… *into thin air.* Puskás shoots. *A moment for the history books.*"
           },
           {
             "kicker": "THE HAT-TRICK",
@@ -1750,7 +1761,7 @@
           }
         ],
         "recap": {
-          "sub": "Hungary fire *nearly 35 shots* at goal. England, *5.*"
+          "sub": "Hidegkuti scores a *hat-trick.* Puskás, *two.*"
         },
         "ticker": [
           {},
@@ -1781,18 +1792,19 @@
         ]
       },
       "cta": {
-        "line": "Modern football was born *that night.*",
+        "line": "That night, football *changed eras.*",
         "button": "FOLLOW",
-        "next": "Tomorrow: the keeper who saved 4 penalties"
+        "next": "Tomorrow: the keeper who saved 4 penalties",
+        "tagline": "Improbable football, explained."
       },
       "voiceover": {
         "hook": "November 25th, 1953. England had never lost at home to a team from the continent.",
         "context": "Their opponents: Hungary. Olympic champions, unbeaten for almost four years. A hundred thousand people are waiting for the match of the century.",
-        "players": "Puskás, the captain. Hidegkuti, a number nine… who never plays up front. And Bozsik, the metronome.",
+        "players": "Puskás, the captain. Hidegkuti, a number nine… who drops deep where nobody expects him. And Bozsik, running the game.",
         "tactic": "Back then, every number marks a number. But Hidegkuti drops deep. If his marker follows, the defence opens up. If he stays, Hidegkuti is free. Nobody knows who to mark.",
-        "goals": "The result: a goal in the very first minute. Then Puskás' drag-back, sending Billy Wright into thin air. And Hidegkuti, on the volley, for a hat-trick. Six-three.",
+        "goals": "The result: a goal inside two minutes. Then Puskás' drag-back, sending Billy Wright into thin air. And Hidegkuti, on the volley, for a hat-trick. Six-three.",
         "legacy": "Six months later, in Budapest: seven-one. And on the pitch that night, a certain Alf Ramsey… future world champion.",
-        "cta": "Modern football was born that night. Follow for more."
+        "cta": "That night, football changed eras. Follow for more."
       },
       "voice": {
         "model": "en_GB-alan-medium"
