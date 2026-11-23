@@ -19,14 +19,20 @@ L'Angleterre joue le WM (3-2-2-3) avec marquage individuel par numéro : le n°5
 marque le n°9 adverse. Hidegkuti, n°9 hongrois, décroche au milieu : s'il est suivi, l'axe s'ouvre pour
 Kocsis (8) et Puskás (10) ; s'il ne l'est pas, il est libre face au jeu.
 
-## Voix off (brouillon, ~150 mots)
-25 novembre 1953, Wembley. L'Angleterre, qui a inventé le football, n'a jamais perdu chez elle contre une
-équipe du continent. En face : la Hongrie, championne olympique, invaincue depuis près de quatre ans.
-Puskás, le capitaine. Hidegkuti, un avant-centre qui ne joue jamais devant. Bozsik, le métronome.
-À l'époque, chaque numéro marque son numéro. Mais le 9 hongrois recule. Si le 5 anglais le suit, la défense
-s'ouvre ; s'il reste, Hidegkuti est libre. Résultat : but dès la première minute. Puis le râteau de Puskás
-qui envoie Billy Wright dans le vide. 6-3. Six mois plus tard, 7-1 à Budapest. Et sur la pelouse ce soir-là,
-un certain Alf Ramsey, futur champion du monde. Le football moderne est né ce soir-là.
+## Voix off — script calé sur les scènes (~140 mots, ~2,5 mots/s)
+Voix : homme ou femme, 25-40 ans, conteur chaleureux, rythme vif, sourire dans la voix. Laisser ~0,3 s de silence entre les scènes.
+
+| Scène | Temps | Texte à dire |
+|---|---|---|
+| Accroche | 0,0–4,5 s | 25 novembre 1953. L'Angleterre n'a jamais perdu chez elle contre une équipe du continent. |
+| Contexte | 4,5–12 s | En face : la Hongrie. Championne olympique, invaincue depuis près de quatre ans. Cent mille personnes attendent le match du siècle. |
+| Joueurs | 12–21 s | Puskás, le capitaine. Hidegkuti, un numéro 9… qui ne joue jamais devant. Et Bozsik, le métronome. |
+| Tactique | 21–34 s | À l'époque, chaque numéro marque son numéro. Mais Hidegkuti recule. Si son défenseur le suit, la défense s'ouvre. S'il reste, Hidegkuti est libre. Personne ne sait qui marquer. |
+| Buts | 34–46 s | Résultat : un but dès la première minute. Puis le râteau de Puskás, qui envoie Billy Wright dans le vide. Score final : six à trois. |
+| Héritage | 46–57 s | Six mois plus tard, à Budapest : sept à un. Et sur la pelouse ce soir-là, un certain Alf Ramsey… futur champion du monde. |
+| CTA | 57–60 s | Le football moderne est né ce soir-là. Abonne-toi. |
+
+Prononciation : Puskás = « Pouch-kâch », Hidegkuti = « Hi-dég-kou-ti », Bozsik = « Bo-jik ».
 
 ## Sources
 - https://en.wikipedia.org/wiki/England_v_Hungary_(1953) — déroulé, buts, contexte
