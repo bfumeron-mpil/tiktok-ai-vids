@@ -28,7 +28,8 @@
   },
   "style": {
     "fog": 0.14,
-    "bpm": 112
+    "bpm": 112,
+    "towers": false
   },
   "teams": {
     "A": {
@@ -1007,7 +1008,7 @@
   },
   "reach": {
     "kicker": "LA PORTÉE",
-    "intro": 1.6,
+    "intro": 1.2,
     "title": "Une nuit qui *redessine* la carte du football.",
     "items": [
       {
@@ -1083,78 +1084,78 @@
   },
   "timeline": {
     "hook": [
-      0,
-      5
+      0.0,
+      10.12
     ],
     "context": [
-      5,
-      17.5
+      10.12,
+      26.49
     ],
     "players": [
-      17.5,
-      26.5
+      26.49,
+      33.99
     ],
     "tactic": [
-      26.5,
-      39.5
+      33.99,
+      46.99
     ],
     "goals": [
-      39.5,
-      51.9
+      46.99,
+      59.39
     ],
     "reach": [
-      51.9,
-      74.5
+      59.39,
+      75.79
     ],
     "epilogue": [
-      74.5,
-      85.9
+      75.79,
+      88.96
     ],
     "cta": [
-      85.9,
-      89.4
+      88.96,
+      93.31
     ]
   },
   "nominal": {
     "hook": 5,
     "context": 12.5,
-    "players": 9,
+    "players": 7.5,
     "tactic": 13,
     "goals": 12.4,
-    "reach": 22.6,
+    "reach": 16.4,
     "epilogue": 11.4,
     "cta": 3.5
   },
   "chapters": [
     {
       "label": "CONTEXTE",
-      "t0": 5,
-      "t1": 17.5
+      "t0": 10.12,
+      "t1": 26.49
     },
     {
       "label": "JOUEURS",
-      "t0": 17.5,
-      "t1": 26.5
+      "t0": 26.49,
+      "t1": 33.99
     },
     {
       "label": "TACTIQUE",
-      "t0": 26.5,
-      "t1": 39.5
+      "t0": 33.99,
+      "t1": 46.99
     },
     {
       "label": "SÉANCE",
-      "t0": 39.5,
-      "t1": 51.9
+      "t0": 46.99,
+      "t1": 59.39
     },
     {
       "label": "PORTÉE",
-      "t0": 51.9,
-      "t1": 74.5
+      "t0": 59.39,
+      "t1": 75.79
     },
     {
       "label": "ÉPILOGUE",
-      "t0": 74.5,
-      "t1": 85.9
+      "t0": 75.79,
+      "t1": 88.96
     }
   ],
   "i18n": {
@@ -1177,22 +1178,34 @@
       },
       "chapters": [
         {
-          "label": "CONTEXT"
+          "label": "CONTEXT",
+          "t0": 11.56,
+          "t1": 27.41
         },
         {
-          "label": "PLAYERS"
+          "label": "PLAYERS",
+          "t0": 27.41,
+          "t1": 34.91
         },
         {
-          "label": "TACTICS"
+          "label": "TACTICS",
+          "t0": 34.91,
+          "t1": 47.91
         },
         {
-          "label": "SHOOTOUT"
+          "label": "SHOOTOUT",
+          "t0": 47.91,
+          "t1": 60.31
         },
         {
-          "label": "RIPPLE"
+          "label": "RIPPLE",
+          "t0": 60.31,
+          "t1": 76.71
         },
         {
-          "label": "EPILOGUE"
+          "label": "EPILOGUE",
+          "t0": 76.71,
+          "t1": 89.71
         }
       ],
       "hook": {
@@ -1363,6 +1376,40 @@
       "voice": {
         "voice_id": "eQ3CIG9xw3bKocVQVkg2",
         "voice_name": "Adrian - Cinematic History Storyteller"
+      },
+      "timeline": {
+        "hook": [
+          0.0,
+          11.56
+        ],
+        "context": [
+          11.56,
+          27.41
+        ],
+        "players": [
+          27.41,
+          34.91
+        ],
+        "tactic": [
+          34.91,
+          47.91
+        ],
+        "goals": [
+          47.91,
+          60.31
+        ],
+        "reach": [
+          60.31,
+          76.71
+        ],
+        "epilogue": [
+          76.71,
+          89.71
+        ],
+        "cta": [
+          89.71,
+          94.46
+        ]
       }
     }
   }
