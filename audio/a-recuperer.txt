@@ -1,2 +1,0 @@
-audio/ep002/voix_fr.mp3 https://elevenlabsusercontent.com/database/workspace/0dec8d4d1e0a41009e3f5362273301e2/content_generation/MSVJbqv1oJRaq1pbzciH/ZLhA30gYN7veQzzHklyg/content.mp3?Expires=1795478400&KeyName=assets-cdn-key-1&Signature=0JrBYdo4REE69IpJt15OsffNXkc=
-audio/ep002/voix_en.mp3 https://elevenlabsusercontent.com/database/workspace/0dec8d4d1e0a41009e3f5362273301e2/content_generation/KsdOkRj7e8zH0hbiwz1j/SafkBvHZe1mWJY28Kb4r/content.mp3?Expires=1795478400&KeyName=assets-cdn-key-1&Signature=RlG64IVPlXe7bPYAfv06--Q-QuI=
