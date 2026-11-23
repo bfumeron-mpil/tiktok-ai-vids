@@ -52,13 +52,25 @@ def extraire(p):
     lignes = [f"# Fact-check — {slug}", "",
               "Sources (renvoient à la fiche) : S1, S2, … — 2 minimum par fait. Statut : ⬜ à faire · ✅ vérifié · ✏️ reformulé · ❌ faux", "",
               "| # | Champ | FR | EN | Sources | Statut |", "|---|---|---|---|---|---|"]
+    # Garde sources et statut des lignes dont le texte FR et EN n'a pas changé ; remet à ⬜ les autres.
+    ancien = {}
+    if out.exists():
+        for l in out.read_text(encoding="utf-8").splitlines():
+            m = re.match(r"\|\s*[0-9+]+\s*\|\s*`([^`]+)`\s*\|(.*)\|(.*)\|(.*)\|\s*(\S+)\s*\|$", l)
+            if m:
+                ancien[m.group(1)] = (m.group(2).strip(), m.group(3).strip(), m.group(4).strip(), m.group(5))
+    gardes = 0
     for i, k in enumerate(fr, 1):
-        lignes.append(f"| {i} | `{k}` | {propre(fr[k])} | {propre(en.get(k, '= FR'))} |  | ⬜ |")
+        tf, te = propre(fr[k]), propre(en.get(k, '= FR'))
+        src, st = "", "⬜"
+        if k in ancien and ancien[k][0] == tf and ancien[k][1] == te:
+            src, st = ancien[k][2], ancien[k][3]; gardes += 1
+        lignes.append(f"| {i} | `{k}` | {tf} | {te} | {src} | {st} |")
     for k in en:
         if k not in fr:
             lignes.append(f"| + | `{k}` | ⚠️ manque FR | {propre(en[k])} |  | ⬜ |")
     out.write_text("\n".join(lignes) + "\n", encoding="utf-8")
-    print(f"{out} : {len(fr)} lignes à vérifier")
+    print(f"{out} : {len(fr)} lignes, {gardes} déjà vérifiées (inchangées), {len(fr) - gardes} à vérifier")
 
 
 def valider(p):

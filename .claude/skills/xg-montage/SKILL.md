@@ -39,8 +39,12 @@ Extraire 12 images du MP4 final et les regarder : durée 60 s, 1080×1920, logo 
 JOUR n/365, score cohérent avec le ticker, aucune faute, CTA lisible, teaser du lendemain correct.
 
 ## Montée en gamme (dans l'ordre d'impact)
-1. **Voix off** : Piper par défaut (`fr_FR-siwis-medium`, `en_GB-alan-medium`, réglables dans `voice` du JSON).
-   Pour plus de chaleur : sa propre voix (`--moteur dossier`) ou une voix premium, même chaîne de mixage.
+1. **Voix off « solennelle »** (signature du compte) : conteur grave, posé, chaleureux, avec des silences.
+   Piper `fr_FR-tom-medium` / `en_GB-alan-medium`, `lengthScale` 1,12–1,15, `sentenceSilence` 0,55, `style: solennel`
+   (voix descendue d'un demi-ton, chaleur dans le grave, aigus adoucis, petite salle). Choisir la voix une fois avec
+   `tools/voix.py … --audition`. Écrire pour l'oreille : dates en toutes lettres, « … » pour les respirations,
+   phrases de 3 à 10 mots. Jamais d'imitation ni de clonage de la voix d'une personne réelle.
+   Niveau au-dessus : un comédien voix off sous contrat (même chaîne avec `--moteur dossier`).
 2. **Musique sous licence** (Artlist, Epidemic Sound) à la place de la nappe procédurale ; garder les impacts.
 3. **Moteur WebGL** (three.js + post-traitement bloom/DOF) pour l'éclairage et les ombres réelles : le JSON
    d'épisode reste le même, seul `engine/engine.html` change.

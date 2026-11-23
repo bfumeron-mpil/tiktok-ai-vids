@@ -1629,20 +1629,23 @@
     "cta": 3
   },
   "voiceover": {
-    "hook": "25 novembre 1953. L'Angleterre n'a jamais perdu chez elle contre une équipe du continent.",
-    "context": "En face : la Hongrie. Championne olympique, invaincue depuis près de quatre ans. Cent mille personnes attendent le match du siècle.",
+    "hook": "Vingt-cinq novembre mille neuf cent cinquante-trois. Wembley. L'Angleterre n'a jamais perdu chez elle… contre une équipe du continent.",
+    "context": "En face, la Hongrie. Championne olympique. Invaincue depuis près de quatre ans. Cent mille personnes attendent… le match du siècle.",
     "players": "Puskás, le capitaine. Hidegkuti, un numéro 9… qui recule là où personne ne l'attend. Et Bozsik, qui organise le jeu.",
     "tactic": "À l'époque, chaque numéro marque son numéro. Mais Hidegkuti recule. Si son défenseur le suit, la défense s'ouvre. S'il reste, Hidegkuti est libre. Personne ne sait qui marquer.",
     "goals": "Résultat : un but en moins de deux minutes. Puis le râteau de Puskás, qui envoie Billy Wright dans le vide. Et Hidegkuti, de volée, pour un triplé. Six à trois.",
-    "legacy": "Six mois plus tard, à Budapest : sept à un. Et sur la pelouse ce soir-là, un certain Alf Ramsey… futur champion du monde.",
+    "legacy": "Six mois plus tard, à Budapest : sept à un. Et sur la pelouse, ce soir-là… un certain Alf Ramsey. Futur champion du monde.",
     "cta": "Ce soir-là, le football a changé d'époque. Abonne-toi."
   },
   "voice": {
     "engine": "piper",
-    "model": "fr_FR-siwis-medium",
-    "lengthScale": 1.0,
-    "lead": 0.25,
-    "tail": 0.5
+    "model": "fr_FR-tom-medium",
+    "speaker": null,
+    "lengthScale": 1.15,
+    "sentenceSilence": 0.55,
+    "style": "solennel",
+    "lead": 0.35,
+    "tail": 0.6
   },
   "i18n": {
     "en": {
@@ -1798,16 +1801,18 @@
         "tagline": "Improbable football, explained."
       },
       "voiceover": {
-        "hook": "November 25th, 1953. England had never lost at home to a team from the continent.",
-        "context": "Their opponents: Hungary. Olympic champions, unbeaten for almost four years. A hundred thousand people are waiting for the match of the century.",
+        "hook": "November the twenty-fifth, nineteen fifty-three. Wembley. England had never lost at home… to a team from the continent.",
+        "context": "Their opponents: Hungary. Olympic champions. Unbeaten for almost four years. A hundred thousand people are waiting… for the match of the century.",
         "players": "Puskás, the captain. Hidegkuti, a number nine… who drops deep where nobody expects him. And Bozsik, running the game.",
         "tactic": "Back then, every number marks a number. But Hidegkuti drops deep. If his marker follows, the defence opens up. If he stays, Hidegkuti is free. Nobody knows who to mark.",
         "goals": "The result: a goal inside two minutes. Then Puskás' drag-back, sending Billy Wright into thin air. And Hidegkuti, on the volley, for a hat-trick. Six-three.",
-        "legacy": "Six months later, in Budapest: seven-one. And on the pitch that night, a certain Alf Ramsey… future world champion.",
+        "legacy": "Six months later, in Budapest: seven-one. And on the pitch that night… a certain Alf Ramsey. Future world champion.",
         "cta": "That night, football changed eras. Follow for more."
       },
       "voice": {
-        "model": "en_GB-alan-medium"
+        "model": "en_GB-alan-medium",
+        "lengthScale": 1.12,
+        "style": "solennel"
       }
     }
   }

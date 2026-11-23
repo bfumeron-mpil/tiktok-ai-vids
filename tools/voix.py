@@ -8,10 +8,15 @@
 Moteurs :
   piper   (défaut) voix neuronale open source, hors ligne. Installation une fois :
             pip install piper-tts
-            python3 -m piper.download_voices fr_FR-siwis-medium en_GB-alan-medium --data-dir models
+            python3 -m piper.download_voices fr_FR-tom-medium fr_FR-upmc-medium en_GB-alan-medium --data-dir models
           (ou télécharger <voix>.onnx + <voix>.onnx.json depuis huggingface.co/rhasspy/piper-voices dans models/)
   dossier un fichier par scène enregistré à la main : hook.wav, context.wav, players.wav, tactic.wav,
           goals.wav, legacy.wav, cta.wav (wav, mp3 ou m4a).
+
+Style « solennel » (défaut, réglable dans `voice.style` du JSON) : voix grave, posée, chaleureuse — l'esprit
+des grands narrateurs de documentaire, sans imiter la voix d'une personne réelle. Pour départager les voix :
+  python3 tools/voix.py episodes/<slug>.json --lang fr --audition --sortie out/audition/
+  (une même phrase dans chaque voix française installée, avec et sans style)
 
 --ajuster : allonge chaque scène si la voix dépasse (jamais plus courte que sa durée nominale), réécrit
 la timeline et les chapitres de la langue dans le JSON. Ensuite : rendre la vidéo, puis audio.py, puis
@@ -50,11 +55,33 @@ def charger_audio(path):
     return x[nz[0]:nz[-1] + 1] if len(nz) else x
 
 
-def piper(texte, modele, length_scale, out):
+STYLES = {
+    # Conteur grave et posé : voix descendue d'~1 demi-ton (tempo conservé), chaleur dans le bas-médium,
+    # aigus adoucis, compression douce, petite salle (réverbération courte, pas d'écho de cathédrale).
+    "solennel": ("asetrate={sr}*0.944,aresample={sr},atempo=1.0593,highpass=f=60,"
+                 "equalizer=f=140:t=q:w=1.1:g=3.5,equalizer=f=320:t=q:w=1.2:g=1.5,equalizer=f=3800:t=q:w=1.5:g=-2.5,"
+                 "acompressor=threshold=-20dB:ratio=2.5:attack=15:release=200:makeup=2,"
+                 "aecho=0.85:0.6:38|67:0.12|0.07"),
+    "neutre": "highpass=f=70,acompressor=threshold=-20dB:ratio=2:attack=10:release=150",
+}
+
+
+def styliser(src, style, out):
+    chaine = STYLES.get(style)
+    if not chaine:
+        return src
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(src), "-af", chaine.format(sr=SR), "-ar", str(SR), str(out)], check=True)
+    return out
+
+
+def piper(texte, modele, length_scale, out, locuteur=None, silence=0.45):
     onnx = ROOT / "models" / f"{modele}.onnx"
     if not onnx.exists():
         sys.exit(f"Modèle absent : {onnx}\n→ python3 -m piper.download_voices {modele} --data-dir models")
-    cmd = [sys.executable, "-m", "piper", "--model", str(onnx), "--output_file", str(out), "--length_scale", str(length_scale)]
+    cmd = [sys.executable, "-m", "piper", "--model", str(onnx), "--output_file", str(out), "--length_scale", str(length_scale),
+           "--sentence_silence", str(silence)]
+    if locuteur is not None:
+        cmd += ["--speaker", str(locuteur)]
     r = subprocess.run(cmd, input=texte.encode("utf-8"), capture_output=True)
     if r.returncode != 0:
         sys.exit("Piper a échoué (pip install piper-tts ?)\n" + r.stderr.decode()[-800:])
@@ -67,12 +94,27 @@ def main():
     ap.add_argument("--moteur", default="piper", choices=["piper", "dossier"])
     ap.add_argument("--dossier")
     ap.add_argument("--ajuster", action="store_true")
+    ap.add_argument("--audition", action="store_true", help="compare les voix installées sur la phrase d'accroche")
     ap.add_argument("--sortie", required=True)
     ap.add_argument("--min-total", type=float, default=62.0, help="durée minimale (TikTok ne rémunère que > 1 min)")
     a = ap.parse_args()
 
     p = pathlib.Path(a.episode); ep = json.loads(p.read_text(encoding="utf-8"))
     v = vue(ep, a.lang)
+    if a.audition:
+        out = pathlib.Path(a.sortie); out.mkdir(parents=True, exist_ok=True)
+        phrase = v.get("voiceover", {}).get("hook", "")
+        pref = "fr_FR" if a.lang == "fr" else "en_"
+        for onnx in sorted((ROOT / "models").glob(f"{pref}*.onnx")):
+            meta = json.loads(onnx.with_suffix(".onnx.json").read_text()) if onnx.with_suffix(".onnx.json").exists() else {}
+            locs = list((meta.get("speaker_id_map") or {"": None}).items())
+            for nom, sid in locs[:4]:
+                for ls in (1.0, 1.15):
+                    brut = out / f"{onnx.stem}{'_' + nom if nom else ''}_x{ls}.wav"
+                    piper(phrase, onnx.stem, ls, brut, sid)
+                    styliser(brut, "solennel", out / f"{brut.stem}_solennel.wav")
+        print(f"Écoute les fichiers dans {out} puis règle voice.model / speaker / lengthScale dans le JSON.")
+        return
     textes, cfg = v.get("voiceover", {}), v.get("voice", {})
     lead, tail = cfg.get("lead", 0.25), cfg.get("tail", 0.5)
     clips = {}
@@ -86,7 +128,10 @@ def main():
         else:
             if not textes.get(s):
                 continue
-            f = tmp / f"{s}.wav"; piper(textes[s], cfg.get("model", "fr_FR-siwis-medium"), cfg.get("lengthScale", 1.0), f)
+            f = tmp / f"{s}.wav"
+            piper(textes[s], cfg.get("model", "fr_FR-tom-medium"), cfg.get("lengthScale", 1.0), f,
+                  cfg.get("speaker"), cfg.get("sentenceSilence", 0.45))
+        f = styliser(f, cfg.get("style", "solennel"), tmp / f"{s}_style.wav")
         clips[s] = charger_audio(f)
 
     tl = dict(v["timeline"]); nominal = v.get("nominal", {})
