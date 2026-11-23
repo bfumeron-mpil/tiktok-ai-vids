@@ -5,9 +5,9 @@ description: Produit un épisode quotidien complet du compte TikTok 0,11 xG (un 
 
 # xg-episode — orchestrateur d'un épisode 0,11 xG
 
-Un épisode = un match niche qui a compté (tactiquement ou historiquement), raconté en 65–75 s (toujours > 1 min,
-seuil de la rémunération TikTok), **en deux versions : français (compte 0,11 xG) et anglais (0.11 xG)**,
-toujours dans le même ordre : **accroche → contexte → joueurs clés → tactique 3D → buts 3D → héritage → CTA**.
+Un épisode = un match niche qui a compté (tactiquement ou historiquement), raconté en 90–110 s (toujours > 1 min,
+seuil de la rémunération TikTok ; plus long si le dossier historique le justifie, jamais de remplissage), **en deux versions : français (compte 0,11 xG) et anglais (0.11 xG)**,
+toujours dans le même ordre : **accroche → contexte → joueurs clés → tactique 3D → buts 3D → la portée (dominos) → épilogue → CTA**.
 
 ## Entrée
 Une date de publication (`AAAA-MM-JJ`) ou un numéro de jour (`J012`). Sans précision : le prochain jour
@@ -38,7 +38,7 @@ du calendrier sans vidéo dans `out/`.
 - Nom du compte : **0,11 xG** (« 0,11 » blanc, « xG » or #F2C14E). Compteur `JOUR n/365` en haut à gauche.
 - Un épisode par jour pendant 365 jours, à partir du 25/11/2026 (J1 = Angleterre 3-6 Hongrie, 73e anniversaire).
 - Publication le jour anniversaire du match chaque fois que possible (« il y a N ans, jour pour jour »).
-- Durée 65–75 s, jamais sous 62 s. Le hook doit tenir dans les 3 premières secondes.
+- Durée 90–110 s, jamais sous 62 s. Le hook doit tenir dans les 3 premières secondes. Dynamique : un temps fort toutes les 2-4 s.
 - Toujours FR + EN : tous les textes anglais vivent dans `i18n.en` du JSON (même structure, textes seulement).
 - Zones sûres TikTok : rien d'important sous y = 1500 px ni dans les 140 px de droite.
 

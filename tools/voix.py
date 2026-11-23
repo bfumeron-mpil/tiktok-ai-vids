@@ -74,8 +74,9 @@ def styliser(src, style, out):
     return out
 
 
-def decouper(piste, dossier, n=len(ORDRE)):
+def decouper(piste, dossier, n=None):
     """Découpe une prise unique en n scènes aux n-1 plus longs silences (les [long pause] entre scènes)."""
+    n = n or len(ORDRE)
     r = subprocess.run(["ffmpeg", "-i", str(piste), "-af", "silencedetect=noise=-38dB:d=0.5", "-f", "null", "-"],
                        capture_output=True, text=True)
     deb = [float(x) for x in __import__("re").findall(r"silence_start: ([0-9.]+)", r.stderr)]
@@ -122,6 +123,8 @@ def main():
 
     p = pathlib.Path(a.episode); ep = json.loads(p.read_text(encoding="utf-8"))
     v = vue(ep, a.lang)
+    global ORDRE
+    ORDRE = list(v["timeline"].keys())  # l'ordre des scènes suit la timeline de l'épisode
     if a.audition:
         out = pathlib.Path(a.sortie); out.mkdir(parents=True, exist_ok=True)
         phrase = v.get("voiceover", {}).get("hook", "")
@@ -168,15 +171,15 @@ def main():
             d = round(max(base, besoin, b0 - a0 if s not in clips else base), 2)
             nouv[s] = [round(t, 2), round(t + d, 2)]; t += d
         if t < a.min_total:  # répartir le manque sur tactique, buts et héritage
-            extra, t2, parts = a.min_total - t, 0.0, {"tactic": .4, "goals": .3, "legacy": .3}
+            extra, t2, parts = a.min_total - t, 0.0, {"tactic": .4, "goals": .3, "legacy": .3, "reach": .3}
             for s in ORDRE:
                 d = nouv[s][1] - nouv[s][0] + extra * parts.get(s, 0)
                 nouv[s] = [round(t2, 2), round(t2 + d, 2)]; t2 += d
         tl = nouv
-        chap = [{"t0": tl[c][0], "t1": tl[c][1]} for c in ["context", "players", "tactic", "goals", "legacy"]]
+        chap = [{"t0": tl[c][0], "t1": tl[c][1]} for c in ORDRE if c not in ("hook", "cta")]
         cible = ep if a.lang == "fr" else ep.setdefault("i18n", {}).setdefault(a.lang, {})
         cible["timeline"] = tl
-        cible["chapters"] = [merge(x, y) for x, y in zip(cible.get("chapters", [{}] * 5) or [{}] * 5, chap)]
+        cible["chapters"] = [merge(x, y) for x, y in zip(cible.get("chapters") or [{}] * len(chap), chap)]
         if a.lang == "fr":
             ep["chapters"] = [merge(x, y) for x, y in zip(ep["chapters"], chap)]
         p.write_text(json.dumps(ep, ensure_ascii=False, indent=2), encoding="utf-8")

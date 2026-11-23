@@ -23,10 +23,17 @@ Un conteur passionné qui explique : pédagogique, inspirant, jamais professoral
 | players | 12–21 s | 3 joueurs : NOM, rôle en 3-4 mots, 1 phrase | 3 × 15 mots |
 | tactic | 21–34 s | 4 temps : la norme → la rupture → conséquence A → conséquence B | 4 × 14 mots |
 | goals | 34–46 s | 2 buts racontés (kicker + 1 phrase) puis rafale du score final | 2 × 14 + 12 |
-| legacy | 46–57 s | 3 temps : ce qui a changé ; un chiffre géant ; le lien avec aujourd'hui | 3 × 18 mots |
+| reach (« La portée ») | ~22 s | intro + 3 à 5 dominos datés : année géante, titre court, 1 phrase | 4 × 20 mots |
+| epilogue | ~11 s | 2 années géantes (fx `rain`, `lightsout`) + phrase finale | 3 × 18 mots |
 | cta | 57–60 s | phrase de clôture + ABONNE-TOI + « Demain : <teaser> » | 15 mots |
 
 Les durées peuvent glisser de ±1 s entre scènes, total 60 s.
+
+## Rythme (le compte doit rester dynamique même à 90-110 s)
+- Une information nouvelle toutes les 2 à 4 secondes : chaque carte, domino ou année est un « temps fort »
+  (le moteur y place automatiquement un zoom punch, un flash de coupe et un impact sonore).
+- Contexte en cartes successives (3), jamais un pavé ; la phrase la plus forte arrive à la fin de chaque scène.
+- Pas plus de 22 mots à l'écran à la fois ; la voix off complète, elle ne lit pas l'écran.
 
 ## Règles du hook (les 3 premières secondes décident de tout)
 - Un paradoxe, un record ou une conséquence énorme : « Ils étaient en vacances 10 jours avant l'Euro. Ils l'ont gagné. »

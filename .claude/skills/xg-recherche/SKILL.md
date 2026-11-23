@@ -14,11 +14,18 @@ Un compte d'histoire du foot vit de sa crédibilité : une erreur de buteur en c
 - Score, buteurs + minutes (si les sources divergent, l'écrire et ne pas afficher la minute)
 - Compositions + numéros (seulement les numéros confirmés)
 - Entraîneurs, affluence (arrondie : « 100 000 »), arbitre si utile
-## Contexte (avant) : 3 faits max, chiffrés
+## Contexte (avant) : 3 faits max, chiffrés — dont UNE ironie ou un paradoxe (ex. l'Anglais Jimmy Hogan, « maître » des Hongrois)
 ## Joueurs clés : 3 joueurs, rôle + une phrase « pourquoi lui »
 ## Tactique : systèmes des deux équipes, LE mécanisme qui a fait la différence, positions approximatives
 ## Moments 3D : 2 actions décrites pas à pas (qui passe à qui, d'où, quel pied, où va le ballon)
-## Héritage (après) : ce que le match a changé, 2-3 faits datés
+## Dossier historique « pourquoi ce match compte » (obligatoire, c'est ce qui fait la valeur du compte)
+- Avant : l'état du football, de la société et de la politique qui rend le match possible (institutions, régime, croyances).
+- Les dominos : 3 à 5 conséquences DATÉES, chacune reliée au match par une chaîne causale sourcée
+  (tactique copiée, compétition créée, carrière lancée, réforme, trajectoire d'un acteur du match).
+  Ne garder que les liens qu'au moins 2 sources établissent ; signaler les nuances historiographiques
+  (« ce ne fut pas une révolution instantanée ») et formuler en conséquence.
+- Épilogue : ce que sont devenus l'équipe et ses acteurs (y compris la part sombre : défaites, exils, régimes).
+- Un angle français ou francophone quand il existe (ex. L'Équipe et la Coupe d'Europe).
 ## Chiffres choc : 2-3 nombres utilisables à l'écran
 ## Sources : URL + ce que chaque source confirme
 ## Points incertains : ce qui ne doit PAS être affirmé
