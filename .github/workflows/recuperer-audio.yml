@@ -2,11 +2,14 @@
 # et les dépose dans le dépôt, pour que le montage puisse les utiliser.
 name: Récupérer l'audio
 on:
+  push:
+    paths:
+      - "audio/a-recuperer.txt"
   workflow_dispatch:
     inputs:
       fichiers:
         description: "Lignes « chemin/dans/le/depot.mp3 URL », séparées par des retours à la ligne ou des ;"
-        required: true
+        required: false
 permissions:
   contents: write
 jobs:
@@ -18,6 +21,8 @@ jobs:
         env:
           FICHIERS: ${{ inputs.fichiers }}
         run: |
+          # Source : l'entrée manuelle, sinon audio/a-recuperer.txt (une ligne « chemin URL » par fichier)
+          if [ -z "$FICHIERS" ] && [ -f audio/a-recuperer.txt ]; then FICHIERS="$(cat audio/a-recuperer.txt)"; fi
           echo "$FICHIERS" | tr ';' '\n' | while read -r chemin url; do
             [ -z "$chemin" ] && continue
             mkdir -p "$(dirname "$chemin")"
@@ -28,6 +33,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git rm -q --cached audio/a-recuperer.txt 2>/dev/null || true
+          rm -f audio/a-recuperer.txt
           git add -A audio
           git commit -m "Audio récupéré par le workflow" || echo "rien de nouveau"
           git push
