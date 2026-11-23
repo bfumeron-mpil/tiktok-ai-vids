@@ -246,7 +246,7 @@ function richText(s, x, y, t, o = {}) {
   ctx.font = `${sty}${weight} ${size}px ${fam}`; ctx.textBaseline = 'alphabetic';
   const words = parseRich((o.upper ? s.toUpperCase() : s).replace(/'/g, '\u2019')), space = ctx.measureText(' ').width, lines = [[]]; let lw = 0;
   for (const w of words) { w.parts.forEach(p => { if (fam === F_DISPLAY) ctx.font = `${p.hl ? 'italic ' : sty}${weight} ${size}px ${fam}`; p.w = ctx.measureText(p.t).width; }); ctx.font = `${sty}${weight} ${size}px ${fam}`; const ww = w.parts.reduce((a, p) => a + p.w, 0); if (lw + ww > maxW && lines[lines.length - 1].length) { lines.push([]); lw = 0; } lines[lines.length - 1].push({ ...w, ww }); lw += ww + space; }
-  let k = 0; const stag = o.stagger ?? 0.06, dur = 0.45;
+  let k = 0; const stag = o.stagger ?? 0.05, dur = 0.32;
   lines.forEach((ln, li) => {
     const tot = ln.reduce((a, w) => a + w.ww, 0) + space * (ln.length - 1);
     let cx = align === 'center' ? x - tot / 2 : x;
@@ -370,25 +370,79 @@ SCENES.hook = (t, T, d) => {
 };
 
 SCENES.context = (t, T, d) => {
-  const S = EP.context;
-  setCam(kf(t, [[0, [-38, 10, 36]], [d, [-22, 7, 26]]], x => x), [0, 1.2, 0], 44);
+  const S = EP.context, cards = S.cards, n = cards.length, foot = S.footerDur || 2.6, slot = (d - foot) / n;
+  const i = Math.min(n, Math.floor(t / slot)), lt = t - i * slot;
+  const shots = [[[-38, 10, 36], [-26, 6, 24]], [[30, 9, -34], [18, 6, -22]], [[-10, 26, 44], [-4, 18, 30]], [[-60, 40, 0], [-50, 30, 6]]];
+  const sh = shots[Math.min(i, shots.length - 1)], u = clamp(lt / (i < n ? slot : foot));
+  setCam(lerp3(sh[0], sh[1], easeOut(u)), [0, 1.2, 0], 44);
   world(T);
   const walk = easeOut(seg(t, 0, 2.4));
-  const lineup = {}; EP.players.forEach((p, i) => { const k = EP.players.filter(q => q.team === p.team).indexOf(p); const z = -13 + k * 2.6; lineup[p.id] = [p.team === 'A' ? -2.2 : 2.2, lerp(z - 30, z, walk)]; });
+  const lineup = {}; EP.players.forEach(p => { const k = EP.players.filter(q => q.team === p.team).indexOf(p); const z = -13 + k * 2.6; lineup[p.id] = [p.team === 'A' ? -2.2 : 2.2, lerp(z - 30, z, walk)]; });
   playersAt(lineup);
   post(T);
   kicker(S.kicker, 60, 400, t);
-  const cards = S.cards;
-  cards.forEach((c, i) => {
-    const t0 = 0.4 + i * 1.0, y = 470 + i * 360;
-    const a = card(60, y, 960, 320, t - t0, c.team === 'A' ? EP.teams.A.color : EP.teams.B.rim, { out: d - t0 - 0.5, fromRight: i % 2 === 1 });
+  if (i < n) {
+    const c = cards[i], y = 900, acc = c.team === 'A' ? EP.teams.A.color : c.team === 'B' ? EP.teams.B.rim : C.gold;
+    const a = card(60, y, 960, 420, lt, acc, { out: slot - 0.4, fromRight: i % 2 === 1 });
     if (a > 0) {
-      ctx.save(); ctx.globalAlpha = a; ctx.font = `400 64px ${F_NUM}`; ctx.fillStyle = C.white; ctx.letterSpacing = '3px'; ctx.fillText(c.name, 110, y + 92); ctx.letterSpacing = '2px';
-      ctx.font = `700 28px ${F_MONO}`; ctx.fillStyle = C.gold; ctx.fillText(c.tag, 110, y + 140); ctx.letterSpacing = '0px'; ctx.restore();
-      richText(c.text, 110, y + 205, t - t0 - 0.3, { size: 40, weight: 600, maxW: 860, stagger: 0.025, out: d - t0 - 0.5 - 0.3 });
+      ctx.save(); ctx.globalAlpha = a; ctx.font = `400 76px ${F_NUM}`; ctx.fillStyle = C.white; ctx.letterSpacing = '3px'; ctx.fillText(c.name, 110, y + 104); ctx.letterSpacing = '2px';
+      ctx.font = `700 28px ${F_MONO}`; ctx.fillStyle = C.gold; ctx.fillText(c.tag, 110, y + 152); ctx.letterSpacing = '0px'; ctx.restore();
+      richText(c.text, 110, y + 222, lt - 0.2, { size: 44, lh: 52, weight: 700, maxW: 860, stagger: 0.022, out: slot - 0.6 });
     }
+  } else {
+    richText(S.footer, W / 2, 980, lt - 0.1, { size: 70, lh: 76, weight: 600, family: F_DISPLAY, align: 'center', maxW: 960, stagger: 0.05 });
+  }
+};
+
+// ---------- LA PORTÉE : la chaîne des conséquences (dominos datés) ----------
+SCENES.reach = (t, T, d) => {
+  const S = EP.reach, items = S.items, intro = S.intro || 1.4, n = items.length, slot = (d - intro) / n;
+  const i = t < intro ? -1 : Math.min(n - 1, Math.floor((t - intro) / slot)), lt = t < intro ? t : t - intro - i * slot;
+  const ang = -0.6 + t * 0.05;
+  setCam([Math.cos(ang) * -78, 44 - t * 0.3, Math.sin(ang) * 60], [8, 0, 0], 48);
+  world(T, { lights: 0.75, crowd: 0.7 });
+  post(T, 1.25);
+  ctx.fillStyle = 'rgba(4,6,10,0.45)'; ctx.fillRect(0, 0, W, H);
+  kicker(S.kicker, 60, 400, t);
+  // frise : points reliés, le point actif en or
+  const fx0 = 120, fx1 = W - 120, fy = 520;
+  ctx.save(); ctx.strokeStyle = 'rgba(237,230,214,0.25)'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(fx0, fy); ctx.lineTo(fx1, fy); ctx.stroke();
+  const prog = i < 0 ? 0 : (i + easeOut(clamp(lt / 0.6))) / n;
+  ctx.strokeStyle = C.gold; ctx.shadowColor = C.gold; ctx.shadowBlur = 16; ctx.beginPath(); ctx.moveTo(fx0, fy); ctx.lineTo(lerp(fx0, fx1, prog * (n - 1) / n + (i >= 0 ? 0 : 0)), fy); ctx.stroke(); ctx.shadowBlur = 0;
+  items.forEach((it, k) => {
+    const x = lerp(fx0, fx1, k / (n - 1)), on = k <= i, cur = k === i;
+    ctx.fillStyle = on ? C.gold : 'rgba(237,230,214,0.35)'; ctx.beginPath(); ctx.arc(x, fy, cur ? 14 : 9, 0, 7); ctx.fill();
+    ctx.font = `700 22px ${F_MONO}`; ctx.textAlign = 'center'; ctx.fillStyle = on ? C.gold : 'rgba(237,230,214,0.45)'; ctx.fillText(it.year, x, fy + 48);
   });
-  richText(S.footer, W / 2, 1310, t - 2.6, { size: 54, weight: 600, family: F_DISPLAY, align: 'center', maxW: 940, stagger: 0.04, out: d - 3.1 });
+  ctx.restore(); ctx.textAlign = 'left';
+  if (i < 0) { richText(S.title, 60, 900, t - 0.1, { size: 92, lh: 96, weight: 600, family: F_DISPLAY, maxW: 940, stagger: 0.06, out: intro - 0.35 }); return; }
+  const it = items[i];
+  // année géante qui glisse (fouet)
+  const yIn = easeOut(clamp(lt / 0.45)), yOut = clamp((lt - (slot - 0.3)) / 0.3);
+  ctx.save(); ctx.globalAlpha = clamp(yIn * (1 - yOut)); ctx.font = `400 300px ${F_NUM}`; ctx.fillStyle = 'rgba(242,193,78,0.92)';
+  ctx.shadowColor = 'rgba(242,193,78,0.45)'; ctx.shadowBlur = 50;
+  ctx.fillText(it.year, 60 + (1 - yIn) * 420 - yOut * 300, 900); ctx.restore();
+  ctx.save(); ctx.globalAlpha = clamp(yIn * (1 - yOut)); ctx.font = `400 64px ${F_NUM}`; ctx.letterSpacing = '4px'; ctx.fillStyle = C.white; ctx.fillText(it.title, 66, 1010); ctx.restore(); ctx.letterSpacing = '0px';
+  richText(it.text, 66, 1110, lt - 0.3, { size: 50, lh: 58, weight: 600, family: F_DISPLAY, maxW: 930, stagger: 0.03, out: slot - 0.55 });
+  ctx.save(); ctx.font = `700 24px ${F_MONO}`; ctx.fillStyle = 'rgba(237,230,214,0.55)'; ctx.textAlign = 'right'; ctx.fillText(`${i + 1}/${n}`, W - 60, 400); ctx.restore(); ctx.textAlign = 'left';
+};
+
+// ---------- ÉPILOGUE : 1954 sous la pluie, 1956 lumières qui s'éteignent ----------
+SCENES.epilogue = (t, T, d) => {
+  const S = EP.epilogue, n = S.beats.length, slot = d / n, i = Math.min(n - 1, Math.floor(t / slot)), lt = t - i * slot, b = S.beats[i];
+  const dark = b.fx === 'lightsout' ? clamp(lt / slot) : b.fx === 'final' ? 0.6 : 0;
+  setCam([-70 + t * 1.2, 22 + t * 0.4, 30 - t * 1.5], [10, 0, 0], 46);
+  world(T, { lights: lerp(0.9, 0.08, dark), crowd: lerp(0.9, 0.05, dark) });
+  post(T, 1.3);
+  ctx.fillStyle = `rgba(2,3,6,${0.25 + dark * 0.5})`; ctx.fillRect(0, 0, W, H);
+  if (b.fx === 'rain') { // pluie de Berne
+    ctx.save(); ctx.strokeStyle = 'rgba(190,205,230,0.28)'; ctx.lineWidth = 2; const r = rand(11);
+    for (let k = 0; k < 260; k++) { const x = r() * W, sp = 1400 + r() * 900, y = (r() * H + T * sp) % (H + 200) - 100; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x - 10, y + 46); ctx.stroke(); }
+    ctx.restore();
+  }
+  kicker(S.kicker, 60, 400, t);
+  if (b.big) { const a = easeOutBack(clamp(lt / 0.5)) * (1 - clamp((lt - slot + 0.3) / 0.3)); if (a > 0) { ctx.save(); ctx.globalAlpha = clamp(a); ctx.font = `400 300px ${F_NUM}`; ctx.textAlign = 'center'; ctx.fillStyle = b.fx === 'lightsout' ? C.white : C.gold; ctx.shadowColor = 'rgba(242,193,78,0.5)'; ctx.shadowBlur = 50; ctx.fillText(b.big, W / 2, 860); ctx.restore(); ctx.textAlign = 'left'; } }
+  richText(b.text, 60, b.big ? 1040 : 860, lt - (b.big ? 0.35 : 0.1), { size: b.big ? 60 : 74, lh: b.big ? 68 : 82, weight: 600, family: F_DISPLAY, maxW: 950, stagger: 0.035, out: slot - (b.big ? 0.35 : 0.1) - 0.4 });
 };
 
 SCENES.players = (t, T, d) => {
@@ -513,6 +567,19 @@ SCENES.cta = (t, T, d) => {
   fadeBlack(seg(t, d - 0.4, d));
 };
 
+// ---------- temps forts par scène (pour le punch-in) ----------
+function hits(name, d) {
+  const h = [0];
+  if (name === 'context') { const n = EP.context.cards.length, f = EP.context.footerDur || 2.6, sl = (d - f) / n; for (let i = 1; i <= n; i++) h.push(i * sl); }
+  if (name === 'players') { const n = EP.keyPlayers.length; for (let i = 1; i < n; i++) h.push(i * d / n); }
+  if (name === 'tactic') EP.tactic.beats.forEach(b => h.push(b.t0));
+  if (name === 'goals') { let acc = 0; EP.goals.sequences.forEach(q => { h.push(acc + q.goalAt); acc += q.d; h.push(acc); }); h.push(acc + EP.goals.recap.slamAt); }
+  if (name === 'reach') { const R = EP.reach, it = R.intro || 1.4, sl = (d - it) / R.items.length; R.items.forEach((_, i) => h.push(it + i * sl)); }
+  if (name === 'epilogue') { const n = EP.epilogue.beats.length; for (let i = 1; i < n; i++) h.push(i * d / n); }
+  if (name === 'legacy' && EP.legacy) EP.legacy.beats.forEach(b => h.push(b.t0));
+  return h.sort((x, y) => x - y);
+}
+
 // ---------- point d'entrée ----------
 window.render = (T) => {
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.shadowBlur = 0;
@@ -521,10 +588,16 @@ window.render = (T) => {
   const [a, b] = EP.timeline[name];
   // Une scène peut être étirée pour suivre la voix off : on joue son contenu (durée nominale) au ralenti.
   const nom = (EP.nominal && EP.nominal[name]) || (b - a), k = nom / (b - a);
-  SCENES[name]((T - a) * k, T, nom);
+  // Temps forts : début de scène + changements de beat/carte/item -> zoom « punch » qui retombe en ~0,25 s
+  const lt = (T - a) * k; let last = 0;
+  for (const h of hits(name, nom)) if (h <= lt) last = h;
+  const dt = lt - last, punch = 1 + 0.055 * Math.exp(-dt * 9);
+  ctx.setTransform(punch, 0, 0, punch, (1 - punch) * W / 2, (1 - punch) * H / 2);
+  SCENES[name](lt, T, nom);
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  if (dt < 0.09) { ctx.fillStyle = `rgba(255,248,230,${0.22 * (1 - dt / 0.09)})`; ctx.fillRect(0, 0, W, H); }
   drawChrome(T);
-  // micro-transition flash entre scènes
-  const dt = Math.min(T - a, b - T); if (dt < 0.12 && name !== 'hook' && T - a < 0.12) fadeBlack(0.6 * (1 - dt / 0.12));
+
 };
 window.ready = async () => { for (const f of ['400 40px Anton', '600 40px "Crimson Text"', 'italic 600 40px "Crimson Text"', '700 40px "Anonymous Pro"', '600 40px "Inter Display"', '700 40px "Inter Display"', '800 40px "Inter Display"']) await document.fonts.load(f); await document.fonts.load(`800 40px Montserrat`); await document.fonts.load(`900 40px Montserrat`); await document.fonts.load(`600 40px Montserrat`); await document.fonts.load(`700 40px Montserrat`); return true; };
 </script>

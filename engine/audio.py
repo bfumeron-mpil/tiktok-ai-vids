@@ -50,16 +50,20 @@ pad *= swell * (0.75 + 0.25 * np.sin(2 * np.pi * 0.08 * t))
 mix[:, 0] += pad * 0.9; mix[:, 1] += np.roll(pad, 240) * 0.9
 
 # 2) pulsation (kick grave) à 100 bpm, dès la fin de l'accroche, s'intensifie pendant tactique/buts
-beat = 60 / 100
+beat = 60 / ep.get("style", {}).get("bpm", 118)
 start = tl["context"][0]
 kick_t = np.arange(0.06, 0.35, 1 / SR)
 for bt in np.arange(start, tl["cta"][0], beat):
     s = int(bt * SR)
     k = np.sin(2 * np.pi * (45 + 90 * np.exp(-kick_t * 30)) * kick_t) * np.exp(-kick_t * 9)
-    g = 0.5 if tl["tactic"][0] <= bt < tl["legacy"][0] else 0.32
+    fin_tension = tl.get("legacy", tl.get("reach", [tl["cta"][0]]))[0]
+    calme = "epilogue" in tl and tl["epilogue"][0] + (tl["epilogue"][1] - tl["epilogue"][0]) / 3 <= bt < tl["epilogue"][1]
+    if calme:
+        continue  # 1956 : la pulsation s'arrête, seule la nappe reste
+    g = 0.5 if tl["tactic"][0] <= bt < fin_tension else 0.36
     e = min(len(k), n - s); mix[s:s + e, :] += (k[:e] * g)[:, None]
     # hat léger sur les contretemps en tactique/buts
-    if tl["tactic"][0] <= bt < tl["legacy"][0]:
+    if tl["context"][0] <= bt < tl["cta"][0]:
         hs = int((bt + beat / 2) * SR); hl = int(0.05 * SR)
         if hs + hl < n:
             h = rng.standard_normal(hl) * np.exp(-np.arange(hl) / SR * 80) * 0.05
@@ -90,8 +94,26 @@ g0 = tl["goals"][0]; acc = 0; kg = k("goals")
 for q in ep["goals"]["sequences"]:
     boom(g0 + (acc + q["goalAt"]) * kg); acc += q["d"]
 boom(g0 + (acc + ep["goals"]["recap"]["slamAt"]) * kg, 1.1)
-for b in ep["legacy"]["beats"]:
+for b in ep.get("legacy", {}).get("beats", []):
     if b.get("big"): boom(tl["legacy"][0] + b["t0"] * k("legacy"), 0.8)
+# La portée : un impact par domino (+ riser avant le premier)
+if "reach" in ep:
+    R = ep["reach"]; a0, b0 = tl["reach"]; nomR = ep.get("nominal", {}).get("reach", b0 - a0); kr = (b0 - a0) / nomR
+    intro = R.get("intro", 1.4); sl = (nomR - intro) / len(R["items"])
+    for i in range(len(R["items"])):
+        boom(a0 + (intro + i * sl) * kr, 0.75)
+    s0 = int((a0 + intro * kr - 1.2) * SR); L0 = int(1.2 * SR)
+    mix[s0:s0 + L0, :] += (lowpass(noise[s0:s0 + L0], 4000) * np.linspace(0, 1, L0) ** 2 * 0.22)[:, None]
+# Épilogue : impact sur chaque année géante
+if "epilogue" in ep:
+    a0, b0 = tl["epilogue"]; nb = len(ep["epilogue"]["beats"]); sl = (b0 - a0) / nb
+    for i, bb in enumerate(ep["epilogue"]["beats"]):
+        if bb.get("big"): boom(a0 + i * sl, 0.9)
+# Contexte : petit impact à chaque carte
+if "context" in ep and "cards" in ep["context"]:
+    a0, b0 = tl["context"]; n = len(ep["context"]["cards"]); f = ep["context"].get("footerDur", 2.6) * (b0 - a0) / ep.get("nominal", {}).get("context", b0 - a0)
+    for i in range(n + 1):
+        boom(a0 + i * (b0 - a0 - f) / n, 0.45)
 boom(tl["hook"][0] + 0.7, 0.6)
 
 # riser avant les buts

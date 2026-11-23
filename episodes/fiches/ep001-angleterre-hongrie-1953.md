@@ -48,7 +48,56 @@ Prononciation : Puskás = « Pouch-kâch », Hidegkuti = « Hi-dég-kou-ti », B
 - S11 https://www.si.com/soccer/2019/06/17/sir-alf-ramsey-man-behind-wingless-wonders-englands-sole-world-cup-triumph — Ramsey titulaire le 25/11/1953, Mondial 1966
 - S12 https://www.redbull.com/int-en/hungary-footballs-first-disruptors — Hidegkuti porte le 9 et décroche
 
+- S13 https://en.wikipedia.org/wiki/Revie_Plan — plan Revie = variante de la tactique hongroise, Revie en avant-centre reculé à la Hidegkuti
+- S14 https://lcfc.com/news/amp/1895906 — McDowall instigateur, réserve de City, plan décisif en finale 3-1 contre Birmingham (FA Cup 1956)
+- S15 https://www.mancity.com/news/first-team/first-team-news/2019/september/man-city-dna-no-4-don-revie — McDowall a vu Hidegkuti à Wembley
+- S16 https://www.irishtimes.com/opinion/hogan-s-heroes-frank-mcnally-on-an-irish-link-to-one-of-the-20th-century-s-greatest-soccer-teams-the-mighty-magyars-1.3961755 — « Jimmy Hogan nous a tout appris » (président de la fédération), Sebes
+- S17 https://www.football.co.uk/amp_7973961.shtm — Hogan, 71 ans, dans les tribunes ; citation de Barcs
+- S18 https://www.nemzetisport.hu/english/2021/10/we-played-football-as-jimmy-hogan-taught-us — Hogan présent à Wembley, invité par les Hongrois
+- S19 https://en.wikipedia.org/wiki/Jimmy_Hogan — né en 1882, entraîneur du MTK Budapest
+- S20 https://en.wikipedia.org/wiki/Guszt%C3%A1v_Sebes — Honvéd repris par le ministère de la Défense, club de l'armée, camp d'entraînement de la sélection
+- S22 https://en.wikipedia.org/wiki/Wolverhampton_Wanderers_F.C._v_Budapest_Honv%C3%A9d_FC — 13/12/1954, match à l'origine de la Coupe d'Europe
+- S23 https://www.uefa.com/news-media/news/0261-10715f1f077b-8325b0ae2a47-1000--uefa-super-cup-might-of-the-magyars — Hanot (L'Équipe), Honvéd à l'étranger en novembre 1956, Kocsis et Czibor au Barça
+- S24 https://www.uefa.com/insideuefa/about-uefa/news/newsid=2259636.html — impulsion de L'Équipe et de Gabriel Hanot pour la Coupe d'Europe
+- S25 https://uk.news.yahoo.com/on-this-day--wolves-are-declared-%E2%80%98champions-of-the-world%E2%80%99-161155965.html — « champions du monde », réponse de Hanot
+- S26 https://www.pressreader.com/uk/late-tackle-football-magazine/20210619/282626035798993 — manifestations à Budapest après la finale 1954
+- S27 https://dailynewshungary.com/what-happened-with-the-hungarian-golden-team/ — manifestations après 1954 ; Honvéd à l'étranger en 1956, trois joueurs restent dehors
+- S28 https://en.wikipedia.org/wiki/Zolt%C3%A1n_Czibor — Czibor, Kocsis, Puskás partent en Europe de l'Ouest après 1956
+- S29 https://www.espn.com/soccer/blog/name/93/post/1845212/headline — Czibor, Kocsis et Puskás choisissent de faire défection
+- S30 https://en.wikipedia.org/wiki/England_national_football_team_manager — équipe choisie par un comité de la FA sous Winterbottom
+- S31 https://en.wikipedia.org/wiki/1954_FIFA_World_Cup_final — finale de Berne, RFA 3-2 Hongrie, série de 31 matchs sans défaite
+- S32 https://www.modernghana.com/news/627613/greatest-comeback-today-in-history-west-germany-win-first.html — fin de la série record de 31 matchs
+- S33 https://www.goal.com/en/news/england-world-cup-1966-team-germany-final/1wrl6d7ujbtye12y215md31fyx — première et seule Coupe du monde de l'Angleterre
+- S34 https://www.wsc.co.uk/?p=2026 — après Wembley 1953, appels à davantage de formation (coaching) en Angleterre
+- S35 https://www.inkl.com/news/hungary-s-golden-squad-the-greatest-football-team-never-to-win-it-all — régime stalinien de Rákosi ; invaincue depuis mai 1950
+- S36 https://thesefootballtimes.co/2020/08/15/gusztav-sebes-the-pioneering-brain-behind-hungarys-magical-magyars/ — la Hongrie, plus forte équipe de la planète au début des années 50
+
+## Dossier historique — pourquoi ce match compte
+**Avant** : une Angleterre persuadée de sa supériorité (la FA tient pour acquis que ses joueurs sont techniquement et
+physiquement supérieurs — S1), dont l'équipe est choisie par un comité (S30, S4). En face, une sélection construite par
+l'État : sous le régime stalinien de Rákosi (S35), Sebes fait reprendre Kispest par l'armée, qui devient Honvéd, et y
+concentre l'ossature de la sélection (S20, S6). Ironie : les Hongrois revendiquent l'héritage d'un entraîneur anglais,
+Jimmy Hogan, présent à Wembley (S16, S17, S18).
+
+**Le match** : le mécanisme Hidegkuti (S1, S6, S7, S8) ; 6-3, 35 tirs contre 5 selon S1 (une seule source → non affiché).
+
+**Après — les dominos** :
+1. 1954 : 7-1 à Budapest, pire défaite anglaise (S4) ; l'Angleterre revoit entraînement et tactique (S1, S34) —
+   nuance historiographique : ce ne fut pas une révolution instantanée (livre *England's Calamity?*), d'où la formulation
+   « revoit enfin » et non « révolutionne ».
+2. 1954-55 : Wolves 3-2 Honvéd (S22), la presse anglaise proclame Wolves « champions du monde » (S25), Gabriel Hanot
+   (L'Équipe) conteste et lance l'idée de la Coupe d'Europe, créée en 1955 (S24, S23, S22).
+3. 1955-56 : Manchester City adopte le « plan Revie », copie du rôle d'Hidegkuti (S13, S15), décisif en finale de
+   FA Cup 1956 (S14).
+4. 1958-66 : la défense à quatre se généralise ; Ramsey, latéral droit à Wembley, devient sélectionneur en 1963 et gagne
+   la seule Coupe du monde anglaise en 1966 (S9, S10, S33).
+
+**Épilogue** : 31 matchs sans défaite jusqu'à la finale de Berne 1954 (S31, S32), manifestations à Budapest (S26, S27) ;
+1956 : Honvéd à l'étranger pendant la révolution, Puskás, Kocsis et Czibor choisissent l'exil (S23, S27, S28, S29).
+
 ## Points incertains
 - « 35 tirs contre 5 » : une seule source → retiré de l'écran.
 - Minute du 1er but : 1re minute / 60 s / 90 s selon les sources → « même pas deux minutes ».
 - Pied de la frappe de Puskás : non confirmé par 2 sources → retiré.
+- « Une seule défaite en six ans » : dépend du découpage de la période → remplacé par « quatre ans sans perdre » (31 matchs, S31, S32).
+- Rôle exact de Hanot : il conteste le titre de « champions du monde » et L'Équipe porte le projet ; la compétition est organisée par l'UEFA en 1955 (S24) → « lance la Coupe d'Europe » s'entend comme « lance l'idée ».

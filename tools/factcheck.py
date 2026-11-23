@@ -13,7 +13,7 @@ Les lignes « style » (aucun fait : « Abonne-toi ») se marquent ✅ avec la s
 import datetime as dt, json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-CHAMPS_TEXTE = {"title", "text", "footer", "line", "sub", "kicker", "tag", "role", "name", "next", "caption", "big", "who", "tagline"}
+CHAMPS_TEXTE = {"title", "text", "footer", "line", "sub", "kicker", "tag", "role", "name", "next", "caption", "big", "who", "tagline", "year"}
 IGNORER = {"meta", "teams", "players", "chapters", "timeline", "nominal", "brand", "voice", "style", "i18n", "cam", "moves",
            "ball", "graphics", "heights", "focus", "labels", "button", "keyPlayersKicker"}
 

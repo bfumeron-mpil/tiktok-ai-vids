@@ -47,54 +47,63 @@
     ],
     "context": [
       5,
-      13.5
+      17.5
     ],
     "players": [
-      13.5,
-      24
+      17.5,
+      26.5
     ],
     "tactic": [
-      24,
-      38
+      26.5,
+      39.5
     ],
     "goals": [
-      38,
-      55.2
+      39.5,
+      56.7
     ],
-    "legacy": [
-      55.2,
-      67
+    "reach": [
+      56.7,
+      79.1
+    ],
+    "epilogue": [
+      79.1,
+      90.5
     ],
     "cta": [
-      67,
-      70.5
+      90.5,
+      94.0
     ]
   },
   "chapters": [
     {
       "label": "CONTEXTE",
       "t0": 5,
-      "t1": 13.5
+      "t1": 17.5
     },
     {
       "label": "JOUEURS",
-      "t0": 13.5,
-      "t1": 24
+      "t0": 17.5,
+      "t1": 26.5
     },
     {
       "label": "TACTIQUE",
-      "t0": 24,
-      "t1": 38
+      "t0": 26.5,
+      "t1": 39.5
     },
     {
       "label": "BUTS",
-      "t0": 38,
-      "t1": 55.2
+      "t0": 39.5,
+      "t1": 56.7
     },
     {
-      "label": "HÉRITAGE",
-      "t0": 55.2,
-      "t1": 67
+      "label": "PORTÉE",
+      "t0": 56.7,
+      "t1": 79.1
+    },
+    {
+      "label": "ÉPILOGUE",
+      "t0": 79.1,
+      "t1": 90.5
     }
   ],
   "players": [
@@ -308,18 +317,25 @@
   },
   "context": {
     "kicker": "LE CONTEXTE",
+    "footerDur": 2.6,
     "cards": [
       {
         "team": "B",
         "name": "ANGLETERRE",
-        "tag": "LA RÉFÉRENCE",
-        "text": "Invaincus à domicile face au continent. Ils jouent en *WM*, le système dominant de l'époque."
+        "tag": "SÛRE D'ELLE",
+        "text": "Jamais battue chez elle par le continent. Son équipe est choisie par *un comité*, pas par l'entraîneur."
       },
       {
         "team": "A",
         "name": "HONGRIE",
-        "tag": "LE « ONZE D'OR »",
-        "text": "Champions olympiques 1952. Invaincus depuis *près de 4 ans.*"
+        "tag": "UNE MACHINE D'ÉTAT",
+        "text": "Régime stalinien. Sebes réunit ses cracks dans *un seul club*, celui de l'armée : Honvéd. Coéquipiers en club, *coéquipiers en sélection.*"
+      },
+      {
+        "team": "X",
+        "name": "JIMMY HOGAN",
+        "tag": "L'IRONIE",
+        "text": "Dans les tribunes, un Anglais de 71 ans. Il a entraîné à Budapest. Les Hongrois diront : *« Il nous a tout appris. »*"
       }
     ],
     "footer": "100 000 spectateurs. La presse anglaise l'appelle *« le match du siècle ».*"
@@ -1588,29 +1604,8 @@
       }
     ]
   },
-  "legacy": {
-    "kicker": "L'HÉRITAGE",
-    "beats": [
-      {
-        "t0": 0.1,
-        "t1": 3.5,
-        "text": "Première défaite de l'Angleterre *chez elle* face à une équipe venue d'au-delà des îles Britanniques."
-      },
-      {
-        "t0": 3.7,
-        "t1": 7.0,
-        "big": "7–1",
-        "text": "Six mois plus tard, à Budapest. Encore aujourd'hui, la *pire défaite* de son histoire."
-      },
-      {
-        "t0": 7.2,
-        "t1": 10.9,
-        "text": "Sur la pelouse ce soir-là : *Alf Ramsey.* 13 ans plus tard, il fait de l'Angleterre la *championne du monde.*"
-      }
-    ]
-  },
   "cta": {
-    "line": "Ce soir-là, le football *a changé d'époque.*",
+    "line": "Chaque jour, un match qui a *tout changé.*",
     "button": "ABONNE-TOI",
     "next": "Demain : le gardien aux 4 penalties",
     "tagline": "Le football improbable, expliqué."
@@ -1620,22 +1615,24 @@
     "b": "xG"
   },
   "nominal": {
-    "hook": 4.5,
-    "context": 7.5,
+    "hook": 5,
+    "context": 12.5,
     "players": 9,
     "tactic": 13,
     "goals": 17.2,
-    "legacy": 11,
-    "cta": 3
+    "reach": 22.4,
+    "epilogue": 11.4,
+    "cta": 3.5
   },
   "voiceover": {
     "hook": "Vingt-cinq novembre mille neuf cent cinquante-trois. Wembley. L'Angleterre n'a jamais perdu chez elle… contre une équipe du continent.",
-    "context": "En face, la Hongrie. Championne olympique. Invaincue depuis près de quatre ans. Cent mille personnes attendent… le match du siècle.",
+    "context": "D'un côté, l'Angleterre. Sûre d'elle… et dont l'équipe est encore choisie par un comité. De l'autre, la Hongrie de Sebes : un régime stalinien, et les meilleurs joueurs réunis dans un seul club, celui de l'armée. Et dans les tribunes… un Anglais. Jimmy Hogan. L'homme à qui, disent les Hongrois, ils doivent tout.",
     "players": "Puskás, le capitaine. Hidegkuti, un numéro 9… qui recule là où personne ne l'attend. Et Bozsik, qui organise le jeu.",
     "tactic": "À l'époque, chaque numéro marque son numéro. Mais Hidegkuti recule. Si son défenseur le suit, la défense s'ouvre. S'il reste, Hidegkuti est libre. Personne ne sait qui marquer.",
     "goals": "Résultat : un but en moins de deux minutes. Puis le râteau de Puskás, qui envoie Billy Wright dans le vide. Et Hidegkuti, de volée, pour un triplé. Six à trois.",
-    "legacy": "Six mois plus tard, à Budapest : sept à un. Et sur la pelouse, ce soir-là… un certain Alf Ramsey. Futur champion du monde.",
-    "cta": "Ce soir-là, le football a changé d'époque. Abonne-toi."
+    "reach": "Et ce n'est que le début. Six mois plus tard, à Budapest : sept à un. L'Angleterre comprend… et change sa façon de s'entraîner. Un an après Wembley, Wolves bat Honvéd. La presse anglaise crie « champions du monde ». À Paris, L'Équipe répond… en lançant la Coupe d'Europe. Manchester City copie Hidegkuti, et gagne la Coupe d'Angleterre. Et le latéral droit de Wembley, Alf Ramsey… offre à l'Angleterre sa seule Coupe du monde.",
+    "epilogue": "Quatre ans sans perdre. Jusqu'à la finale de la Coupe du monde. Puis vient mille neuf cent cinquante-six. La révolution. Les chars. Puskás, Kocsis, Czibor… choisissent l'exil. La plus grande équipe de son temps n'a jamais été championne du monde. Mais ce soir-là, à Wembley… elle a changé le football.",
+    "cta": "Chaque jour, un match qui a tout changé. Abonne-toi."
   },
   "voice": {
     "engine": "elevenlabs",
@@ -1684,7 +1681,10 @@
           "label": "GOALS"
         },
         {
-          "label": "LEGACY"
+          "label": "RIPPLE"
+        },
+        {
+          "label": "EPILOGUE"
         }
       ],
       "hook": {
@@ -1696,13 +1696,18 @@
         "cards": [
           {
             "name": "ENGLAND",
-            "tag": "THE BENCHMARK",
-            "text": "Unbeaten at home against the continent. They play the *WM*, the dominant system of the day."
+            "tag": "SURE OF ITSELF",
+            "text": "Never beaten at home by the continent. The team is picked by *a committee*, not by the manager."
           },
           {
             "name": "HUNGARY",
-            "tag": "THE “GOLDEN TEAM”",
-            "text": "1952 Olympic champions. Unbeaten for *nearly 4 years.*"
+            "tag": "A STATE MACHINE",
+            "text": "A Stalinist regime. Sebes gathers his stars in *one club*, the army's: Honvéd. Club team-mates, *national team-mates.*"
+          },
+          {
+            "name": "JIMMY HOGAN",
+            "tag": "THE IRONY",
+            "text": "In the stands, a 71-year-old Englishman. He coached in Budapest. The Hungarians will say: *“He taught us everything.”*"
           }
         ],
         "footer": "100,000 fans. The English press calls it *“the Match of the Century”.*"
@@ -1783,34 +1788,21 @@
           }
         ]
       },
-      "legacy": {
-        "kicker": "THE LEGACY",
-        "beats": [
-          {
-            "text": "England's first home defeat to a team from outside the British Isles."
-          },
-          {
-            "text": "Six months later, in Budapest. Still England's *worst defeat* ever."
-          },
-          {
-            "text": "On the pitch that night: *Alf Ramsey.* 13 years later, he made England *world champions.*"
-          }
-        ]
-      },
       "cta": {
-        "line": "That night, football *changed eras.*",
+        "line": "Every day, a match that *changed everything.*",
         "button": "FOLLOW",
         "next": "Tomorrow: the keeper who saved 4 penalties",
         "tagline": "Improbable football, explained."
       },
       "voiceover": {
         "hook": "November the twenty-fifth, nineteen fifty-three. Wembley. England had never lost at home… to a team from the continent.",
-        "context": "Their opponents: Hungary. Olympic champions. Unbeaten for almost four years. A hundred thousand people are waiting… for the match of the century.",
+        "context": "On one side, England. Sure of itself… its team still picked by a committee. On the other, Sebes's Hungary: a Stalinist regime, and the best players gathered in a single club, the army's. And in the stands… an Englishman. Jimmy Hogan. The man the Hungarians say taught them everything.",
         "players": "Puskás, the captain. Hidegkuti, a number nine… who drops deep where nobody expects him. And Bozsik, running the game.",
         "tactic": "Back then, every number marks a number. But Hidegkuti drops deep. If his marker follows, the defence opens up. If he stays, Hidegkuti is free. Nobody knows who to mark.",
         "goals": "The result: a goal inside two minutes. Then Puskás' drag-back, sending Billy Wright into thin air. And Hidegkuti, on the volley, for a hat-trick. Six-three.",
-        "legacy": "Six months later, in Budapest: seven-one. And on the pitch that night… a certain Alf Ramsey. Future world champion.",
-        "cta": "That night, football changed eras. Follow for more."
+        "reach": "And this is only the beginning. Six months later, in Budapest: seven-one. England finally understands… and changes the way it trains. A year after Wembley, Wolves beat Honvéd. The English press cries “champions of the world”. In Paris, L'Équipe answers… by launching the European Cup. Manchester City copy Hidegkuti, and win the FA Cup. And Wembley's right-back, Alf Ramsey… gives England its only World Cup.",
+        "epilogue": "Four years unbeaten. Until the World Cup final. Then came nineteen fifty-six. Revolution. Tanks. Puskás, Kocsis, Czibor… chose exile. The greatest team of its time was never world champion. But that night, at Wembley… it changed football.",
+        "cta": "Every day, a match that changed everything. Follow for more."
       },
       "voice": {
         "voice_id": "eQ3CIG9xw3bKocVQVkg2",
@@ -1818,7 +1810,89 @@
         "elevenlabs": {
           "generation_id": "DbgYAG23amHY8Gkr8L7M"
         }
+      },
+      "reach": {
+        "kicker": "THE RIPPLE EFFECT",
+        "title": "And this is only *the beginning.*",
+        "items": [
+          {
+            "title": "THE SHOCK",
+            "text": "Rematch in Budapest: *7–1.* England finally rethinks how it *trains* and how it *plays.*"
+          },
+          {
+            "title": "THE EUROPEAN CUP",
+            "text": "Wolves beat Honvéd, the English press cries *“champions of the world”.* At L'Équipe, Gabriel Hanot answers by launching *the European Cup.*"
+          },
+          {
+            "title": "ENGLAND'S FALSE 9",
+            "text": "Manchester City copy Hidegkuti: the *“Revie Plan”.* City lift *the FA Cup.*"
+          },
+          {
+            "title": "THE LESSON LEARNED",
+            "text": "Wembley's right-back, *Alf Ramsey*, becomes England manager. He gives England its *only World Cup.*"
+          }
+        ]
+      },
+      "epilogue": {
+        "kicker": "THE EPILOGUE",
+        "beats": [
+          {
+            "text": "Four years unbeaten… until *the World Cup final*, in Bern. Budapest *takes to the streets.*"
+          },
+          {
+            "text": "Revolution, Soviet tanks. Puskás, Kocsis and Czibor are abroad. They choose *exile.*"
+          },
+          {
+            "text": "The greatest team of its time was never *world champion.* But that night, it *changed football.*"
+          }
+        ]
       }
     }
+  },
+  "reach": {
+    "kicker": "LA PORTÉE",
+    "intro": 1.6,
+    "title": "Et ce n'est que *le début.*",
+    "items": [
+      {
+        "year": "1954",
+        "title": "LE CHOC",
+        "text": "Revanche à Budapest : *7–1.* L'Angleterre revoit enfin sa façon de *s'entraîner* et de *jouer.*"
+      },
+      {
+        "year": "1955",
+        "title": "LA COUPE D'EUROPE",
+        "text": "Wolves bat Honvéd, la presse anglaise crie *« champions du monde ».* À L'Équipe, Gabriel Hanot répond en lançant *la Coupe d'Europe.*"
+      },
+      {
+        "year": "1956",
+        "title": "LE FAUX 9 ANGLAIS",
+        "text": "Manchester City copie Hidegkuti : c'est le *« plan Revie ».* City soulève *la Coupe d'Angleterre.*"
+      },
+      {
+        "year": "1966",
+        "title": "LA LEÇON RETENUE",
+        "text": "Le latéral droit de Wembley, *Alf Ramsey*, devient sélectionneur. Il offre à l'Angleterre sa *seule Coupe du monde.*"
+      }
+    ]
+  },
+  "epilogue": {
+    "kicker": "L'ÉPILOGUE",
+    "beats": [
+      {
+        "big": "1954",
+        "fx": "rain",
+        "text": "Quatre ans sans perdre… jusqu'à la *finale de la Coupe du monde*, à Berne. Budapest *descend dans la rue.*"
+      },
+      {
+        "big": "1956",
+        "fx": "lightsout",
+        "text": "Révolution, chars soviétiques. Puskás, Kocsis et Czibor sont à l'étranger. Ils choisissent *l'exil.*"
+      },
+      {
+        "fx": "final",
+        "text": "La plus grande équipe de son temps n'a jamais été *championne du monde.* Mais ce soir-là, elle a *changé le football.*"
+      }
+    ]
   }
 }
