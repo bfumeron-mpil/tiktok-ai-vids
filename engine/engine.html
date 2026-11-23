@@ -514,7 +514,9 @@ window.render = (T) => {
   let name = null; for (const k in EP.timeline) { const [a, b] = EP.timeline[k]; if (T >= a && T < b) { name = k; break; } }
   if (!name) name = 'cta';
   const [a, b] = EP.timeline[name];
-  SCENES[name](T - a, T, b - a);
+  // Une scène peut être étirée pour suivre la voix off : on joue son contenu (durée nominale) au ralenti.
+  const nom = (EP.nominal && EP.nominal[name]) || (b - a), k = nom / (b - a);
+  SCENES[name]((T - a) * k, T, nom);
   drawChrome(T);
   // micro-transition flash entre scènes
   const dt = Math.min(T - a, b - T); if (dt < 0.12 && name !== 'hook' && T - a < 0.12) fadeBlack(0.6 * (1 - dt / 0.12));

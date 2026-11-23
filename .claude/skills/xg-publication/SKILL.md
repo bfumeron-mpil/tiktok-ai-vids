@@ -20,6 +20,10 @@ Il y a N ans jour pour jour (<date en toutes lettres>) : <match>, <compétition>
 - 5 à 8 hashtags, pas plus. Jamais de hashtag trompeur (nom de star absente du match).
 - CTA en rotation : question en commentaire, vote pour le prochain match, tag d'un ami, note sur 10.
 
+## Version anglaise (compte 0.11 xG)
+Même format en anglais, hashtags `#football #soccer #footballhistory #tactics #011xG`, publiée à 18 h–20 h
+heure de Londres / 13 h–15 h heure de New York. Ne jamais publier la version FR et EN sur le même compte.
+
 ## Couverture
 Image du MP4 au moment du score final ou du chiffre géant de l'héritage (lisible en vignette) ;
 `ffmpeg -ss <t> -i video.mp4 -frames:v 1 cover.jpg`.

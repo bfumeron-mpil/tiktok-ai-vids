@@ -9,22 +9,25 @@ description: Monte la vidéo d'un épisode 0,11 xG à partir de son JSON — con
 Node 18+ avec `playwright`, Chrome/Chromium, Python 3 + numpy, ffmpeg (libx264, aac).
 Polices : Montserrat (800/900/700/600). `npm i playwright` si absent ; `CHROME=/chemin/chrome` si besoin.
 
-## Étapes
+## Étapes (à faire pour LANG=fr puis LANG=en)
 ```bash
-SLUG=ep001-angleterre-hongrie-1953
+SLUG=ep001-angleterre-hongrie-1953; LANG=fr   # puis en
+# 0. Voix off (Piper) : génère la piste et étire les scènes de cette langue pour qu'elle tienne
+python3 tools/voix.py episodes/$SLUG.json --lang $LANG --ajuster --sortie out/$SLUG/voix_$LANG.wav
 # 1. Images de contrôle aux moments les plus chargés, puis planche contact
-node engine/render.mjs episodes/$SLUG.json out/$SLUG/frames --frames 3,8,16,26,30,33,37,42,45,50,54,59
-ffmpeg -y -pattern_type glob -i "out/$SLUG/frames/*.jpg" -vf "scale=360:640,tile=6x2" -frames:v 1 out/$SLUG/planche.jpg
+node engine/render.mjs episodes/$SLUG.json out/$SLUG/frames_$LANG --lang $LANG --frames 3,9,17,28,33,37,42,47,52,58,63,68
+ffmpeg -y -pattern_type glob -i "out/$SLUG/frames_$LANG/*.jpg" -vf "scale=360:640,tile=6x2" -frames:v 1 out/$SLUG/planche_$LANG.jpg
 # → REGARDER la planche avant tout rendu complet (lisibilité, chevauchements, caméra, typographie)
 
 # 2. Rendu : un MP4 par scène (H.264 CRF 18, pas de PNG intermédiaires) ~2,5 min
-node engine/render.mjs episodes/$SLUG.json out/$SLUG/scenes
+node engine/render.mjs episodes/$SLUG.json out/$SLUG/scenes_$LANG --lang $LANG
 # 3. Bande-son procédurale (nappe, pulsation, whooshes, impacts calés sur les buts)
-python3 engine/audio.py episodes/$SLUG.json out/$SLUG/audio.wav
+python3 engine/audio.py episodes/$SLUG.json out/$SLUG/musique_$LANG.wav $LANG
 # 4. Assemblage sans ré-encodage + son
-ffmpeg -y -f concat -safe 0 -i out/$SLUG/scenes/concat.txt -c copy out/$SLUG/video.mp4
-ffmpeg -y -i out/$SLUG/video.mp4 -i out/$SLUG/audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k \
-       -shortest -movflags +faststart out/0-11xG_J<nnn>_$SLUG.mp4
+ffmpeg -y -f concat -safe 0 -i out/$SLUG/scenes_$LANG/concat.txt -c copy out/$SLUG/video_$LANG.mp4
+# 5. Mixage voix + musique (la musique baisse sous la voix, -14 LUFS)
+engine/mix_voix.sh out/$SLUG/video_$LANG.mp4 out/$SLUG/voix_$LANG.wav out/$SLUG/musique_$LANG.wav \
+       out/0-11xG_J<nnn>_${SLUG}_${LANG^^}.mp4 0
 ```
 
 ## Corriger sans tout refaire
@@ -36,8 +39,8 @@ Extraire 12 images du MP4 final et les regarder : durée 60 s, 1080×1920, logo 
 JOUR n/365, score cohérent avec le ticker, aucune faute, CTA lisible, teaser du lendemain correct.
 
 ## Montée en gamme (dans l'ordre d'impact)
-1. **Voix off** : script voix off de la fiche → TTS premium (ElevenLabs, voix FR « conteur »), mixée à -14 LUFS,
-   musique abaissée de 8 dB sous la voix. Caler les `t0` des beats sur la voix.
+1. **Voix off** : Piper par défaut (`fr_FR-siwis-medium`, `en_GB-alan-medium`, réglables dans `voice` du JSON).
+   Pour plus de chaleur : sa propre voix (`--moteur dossier`) ou une voix premium, même chaîne de mixage.
 2. **Musique sous licence** (Artlist, Epidemic Sound) à la place de la nappe procédurale ; garder les impacts.
 3. **Moteur WebGL** (three.js + post-traitement bloom/DOF) pour l'éclairage et les ombres réelles : le JSON
    d'épisode reste le même, seul `engine/engine.html` change.

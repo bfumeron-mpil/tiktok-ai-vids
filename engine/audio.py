@@ -1,5 +1,5 @@
 """Bande-son procédurale d'un épisode (sans asset externe).
-Usage : python3 audio.py episode.json out.wav
+Usage : python3 audio.py episode.json out.wav [fr|en]
 Nappe cinématique + pulsation, whoosh à chaque changement de scène, impacts sur les buts et le score final.
 À remplacer/compléter par une voix off (ElevenLabs) et une musique sous licence pour la version premium.
 """
@@ -9,6 +9,15 @@ import numpy as np
 SR = 48000
 ep = json.load(open(sys.argv[1]))
 out = sys.argv[2]
+LANG = sys.argv[3] if len(sys.argv) > 3 else "fr"
+if LANG != "fr":
+    def _m(a, b):
+        if isinstance(a, list) and isinstance(b, list):
+            return [_m(x, b[i]) if i < len(b) else x for i, x in enumerate(a)] + b[len(a):]
+        if isinstance(a, dict) and isinstance(b, dict):
+            o = dict(a); o.update({k: _m(a[k], v) if k in a else v for k, v in b.items()}); return o
+        return a if b is None else b
+    ep = _m(ep, ep.get("i18n", {}).get(LANG, {}))
 tl = ep["timeline"]
 DUR = max(b for a, b in tl.values())
 n = int(DUR * SR)
@@ -74,12 +83,15 @@ def boom(at, gain=0.9):
     b += lowpass(rng.standard_normal(len(tt)), 900) * np.exp(-tt * 9) * 0.8
     mix[s:s + len(tt), :] += (b * gain)[:, None]
 
-g0 = tl["goals"][0]; acc = 0
+def k(scene):
+    a, b = tl[scene]; nom = ep.get("nominal", {}).get(scene, b - a); return (b - a) / nom
+
+g0 = tl["goals"][0]; acc = 0; kg = k("goals")
 for q in ep["goals"]["sequences"]:
-    boom(g0 + acc + q["goalAt"]); acc += q["d"]
-boom(g0 + acc + ep["goals"]["recap"]["slamAt"], 1.1)
+    boom(g0 + (acc + q["goalAt"]) * kg); acc += q["d"]
+boom(g0 + (acc + ep["goals"]["recap"]["slamAt"]) * kg, 1.1)
 for b in ep["legacy"]["beats"]:
-    if b.get("big"): boom(tl["legacy"][0] + b["t0"], 0.8)
+    if b.get("big"): boom(tl["legacy"][0] + b["t0"] * k("legacy"), 0.8)
 boom(tl["hook"][0] + 0.7, 0.6)
 
 # riser avant les buts

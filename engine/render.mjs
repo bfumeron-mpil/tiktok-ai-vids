@@ -10,7 +10,16 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const [, , epPath, outDir = 'out', ...rest] = process.argv;
 const arg = k => { const i = rest.indexOf(k); return i >= 0 ? rest[i + 1] : null; };
 const FPS = 30;
-const EP = JSON.parse(fs.readFileSync(epPath, 'utf8'));
+const RAW = JSON.parse(fs.readFileSync(epPath, 'utf8'));
+// Langue : --lang en applique la surcouche EP.i18n.en (objets fusionnés, tableaux fusionnés indice par indice)
+const merge = (a, b) => {
+  if (Array.isArray(a) && Array.isArray(b)) return a.map((x, i) => i < b.length ? merge(x, b[i]) : x).concat(b.slice(a.length));
+  if (a && b && typeof a === 'object' && typeof b === 'object' && !Array.isArray(a)) { const o = { ...a }; for (const k in b) o[k] = k in a ? merge(a[k], b[k]) : b[k]; return o; }
+  return b === undefined || b === null ? a : b;
+};
+const LANG = arg('--lang') || 'fr';
+const EP = LANG === 'fr' ? RAW : merge(RAW, (RAW.i18n || {})[LANG] || (() => { throw new Error(`pas de surcouche i18n.${LANG}`); })());
+delete EP.i18n;
 fs.mkdirSync(outDir, { recursive: true });
 
 const browser = await chromium.launch({ executablePath: process.env.CHROME || '/usr/bin/google-chrome', args: ['--disable-gpu-vsync'] });

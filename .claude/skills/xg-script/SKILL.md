@@ -3,7 +3,7 @@ name: xg-script
 description: Écrit le script à l'écran d'un épisode 0,11 xG de 60 s à partir d'une fiche match vérifiée — structure fixe en 7 scènes, ton pédagogique et inspirant de storyteller foot, budget de mots par scène pour une lecture confortable. À utiliser après xg-recherche et avant xg-storyboard-3d.
 ---
 
-# xg-script — 60 secondes, toujours la même structure
+# xg-script — 65–75 secondes, toujours la même structure, en FR et en EN
 
 ## Le ton 0,11 xG
 Un conteur passionné qui explique : pédagogique, inspirant, jamais professoral.
@@ -15,7 +15,7 @@ Un conteur passionné qui explique : pédagogique, inspirant, jamais professoral
 - Mots surlignés en or : `*mot*` dans le JSON, 1 à 2 par phrase maximum, sur le mot qui porte l'émotion.
 - Typographie française : espaces insécables avant `? ! : »` et après `«` (utiliser ` `).
 
-## Structure et budget (60 s, ~2,5 mots lus par seconde)
+## Structure et budget (durées nominales ; la voix off peut étirer chaque scène, total 65–75 s)
 | Scène | Durée | Contenu | Budget |
 |---|---|---|---|
 | hook | 0–4,5 s | date + lieu (kicker) ; une phrase-paradoxe | 25 mots |
@@ -32,6 +32,15 @@ Les durées peuvent glisser de ±1 s entre scènes, total 60 s.
 - Un paradoxe, un record ou une conséquence énorme : « Ils étaient en vacances 10 jours avant l'Euro. Ils l'ont gagné. »
 - Jamais « Aujourd'hui je vais vous parler de… ».
 - La date en kicker sert d'ancrage (« 25 NOVEMBRE 1953 · WEMBLEY »).
+
+## Version anglaise
+Adapter, ne pas traduire mot à mot : même hook en esprit, références et unités anglaises (« No. 9 »,
+« 100,000 fans », « hat-trick »), guillemets anglais. Tout va dans `i18n.en` (mêmes clés, textes seulement),
+plus `i18n.en.voiceover`, `i18n.en.brand` = `{a: "0.11", b: "xG"}`, chapitres CONTEXT/PLAYERS/TACTICS/GOALS/LEGACY.
+
+## Voix off
+`voiceover` (FR) et `i18n.en.voiceover` : un texte par scène (`hook`…`cta`), ~2,5 mots/s, phrases parlées,
+plus courtes que les textes à l'écran qu'elles complètent (ne pas lire l'écran mot à mot).
 
 ## Sortie
 Les textes, directement dans les champs `hook`, `context`, `keyPlayers`, `tactic.beats`, `goals.sequences[].text`,
