@@ -42,68 +42,68 @@
   },
   "timeline": {
     "hook": [
-      0,
-      5
+      0.0,
+      9.02
     ],
     "context": [
-      5,
-      17.5
+      9.02,
+      30.89
     ],
     "players": [
-      17.5,
-      26.5
+      30.89,
+      40.1
     ],
     "tactic": [
-      26.5,
-      39.5
+      40.1,
+      53.1
     ],
     "goals": [
-      39.5,
-      56.7
+      53.1,
+      70.3
     ],
     "reach": [
-      56.7,
-      79.1
+      70.3,
+      97.87
     ],
     "epilogue": [
-      79.1,
-      90.5
+      97.87,
+      118.28
     ],
     "cta": [
-      90.5,
-      94.0
+      118.28,
+      122.76
     ]
   },
   "chapters": [
     {
       "label": "CONTEXTE",
-      "t0": 5,
-      "t1": 17.5
+      "t0": 9.02,
+      "t1": 30.89
     },
     {
       "label": "JOUEURS",
-      "t0": 17.5,
-      "t1": 26.5
+      "t0": 30.89,
+      "t1": 40.1
     },
     {
       "label": "TACTIQUE",
-      "t0": 26.5,
-      "t1": 39.5
+      "t0": 40.1,
+      "t1": 53.1
     },
     {
       "label": "BUTS",
-      "t0": 39.5,
-      "t1": 56.7
+      "t0": 53.1,
+      "t1": 70.3
     },
     {
       "label": "PORTÉE",
-      "t0": 56.7,
-      "t1": 79.1
+      "t0": 70.3,
+      "t1": 97.87
     },
     {
       "label": "ÉPILOGUE",
-      "t0": 79.1,
-      "t1": 90.5
+      "t0": 97.87,
+      "t1": 118.28
     }
   ],
   "players": [
@@ -1669,22 +1669,34 @@
       },
       "chapters": [
         {
-          "label": "CONTEXT"
+          "label": "CONTEXT",
+          "t0": 9.16,
+          "t1": 29.68
         },
         {
-          "label": "PLAYERS"
+          "label": "PLAYERS",
+          "t0": 29.68,
+          "t1": 38.68
         },
         {
-          "label": "TACTICS"
+          "label": "TACTICS",
+          "t0": 38.68,
+          "t1": 51.68
         },
         {
-          "label": "GOALS"
+          "label": "GOALS",
+          "t0": 51.68,
+          "t1": 68.88
         },
         {
-          "label": "RIPPLE"
+          "label": "RIPPLE",
+          "t0": 68.88,
+          "t1": 97.69
         },
         {
-          "label": "EPILOGUE"
+          "label": "EPILOGUE",
+          "t0": 97.69,
+          "t1": 117.6
         }
       ],
       "hook": {
@@ -1845,6 +1857,40 @@
           {
             "text": "The greatest team of its time was never *world champion.* But that night, it *changed football.*"
           }
+        ]
+      },
+      "timeline": {
+        "hook": [
+          0.0,
+          9.16
+        ],
+        "context": [
+          9.16,
+          29.68
+        ],
+        "players": [
+          29.68,
+          38.68
+        ],
+        "tactic": [
+          38.68,
+          51.68
+        ],
+        "goals": [
+          51.68,
+          68.88
+        ],
+        "reach": [
+          68.88,
+          97.69
+        ],
+        "epilogue": [
+          97.69,
+          117.6
+        ],
+        "cta": [
+          117.6,
+          122.45
         ]
       }
     }

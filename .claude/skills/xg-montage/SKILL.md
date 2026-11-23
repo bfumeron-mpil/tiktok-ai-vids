@@ -48,7 +48,12 @@ JOUR n/365, score cohérent avec le ticker, aucune faute, CTA lisible, teaser du
    EN « Adrian – Cinematic History Storyteller » (`eQ3CIG9xw3bKocVQVkg2`), modèle `eleven_v4`.
    Une génération par langue : le texte `voiceover` des 7 scènes enchaîné, `[slowly]` en tête, `[long pause]` entre
    les scènes, `[warmly]` avant le CTA. Récupérer le MP3, puis
-   `python3 tools/voix.py episodes/<slug>.json --lang fr --moteur piste --piste voix_fr.mp3 --ajuster --sortie …`
+   **Récupérer le MP3 sans intervention** (l'espace de travail n'a pas accès à ElevenLabs, GitHub oui) :
+   1. lire les `content_url` des prises avec `creative_get_flow_run_status` (liens signés, valables ~3 h) ;
+   2. écrire `audio/a-recuperer.txt` (une ligne « audio/<ep>/voix_fr.mp3 URL » par fichier), commit + push ;
+   3. le workflow `.github/workflows/recuperer-audio.yml` se déclenche, télécharge et pousse les MP3 (~1 min) ;
+   4. `git fetch --depth=5 origin main && git merge --ff-only FETCH_HEAD`.
+   Puis `python3 tools/voix.py episodes/<slug>.json --lang fr --moteur piste --piste audio/<ep>/voix_fr.mp3 --ajuster --sortie …`
    (découpe aux 6 plus longs silences, étire les scènes). Plan gratuit : 10 000 caractères/mois ≈ 5 épisodes FR+EN.
    Niveau au-dessus : un comédien voix off sous contrat (même chaîne avec `--moteur dossier`).
 2. **Musique sous licence** (Artlist, Epidemic Sound) à la place de la nappe procédurale ; garder les impacts.
