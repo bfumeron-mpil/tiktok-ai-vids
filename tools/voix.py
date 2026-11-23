@@ -74,6 +74,26 @@ def styliser(src, style, out):
     return out
 
 
+def decouper(piste, dossier, n=len(ORDRE)):
+    """Découpe une prise unique en n scènes aux n-1 plus longs silences (les [long pause] entre scènes)."""
+    r = subprocess.run(["ffmpeg", "-i", str(piste), "-af", "silencedetect=noise=-38dB:d=0.5", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    deb = [float(x) for x in __import__("re").findall(r"silence_start: ([0-9.]+)", r.stderr)]
+    fin = [float(x) for x in __import__("re").findall(r"silence_end: ([0-9.]+)", r.stderr)]
+    sil = sorted(zip(deb, fin), key=lambda x: x[1] - x[0], reverse=True)[: n - 1]
+    if len(sil) < n - 1:
+        sys.exit(f"Seulement {len(sil)} silences trouvés, il en faut {n - 1} : vérifier les [long pause] du texte.")
+    coupes = [(a + b) / 2 for a, b in sorted(sil)]
+    bornes = [0.0] + coupes + [None]
+    dossier.mkdir(parents=True, exist_ok=True)
+    for i, s in enumerate(ORDRE[:n]):
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(piste), "-ss", f"{bornes[i]:.3f}"]
+        if bornes[i + 1] is not None:
+            cmd += ["-to", f"{bornes[i + 1]:.3f}"]
+        subprocess.run(cmd + ["-ar", str(SR), "-ac", "1", str(dossier / f"{s}.wav")], check=True)
+    print("  coupes aux silences :", ", ".join(f"{c:.2f}s" for c in coupes))
+
+
 def piper(texte, modele, length_scale, out, locuteur=None, silence=0.45):
     onnx = ROOT / "models" / f"{modele}.onnx"
     if not onnx.exists():
@@ -91,7 +111,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("episode")
     ap.add_argument("--lang", default="fr")
-    ap.add_argument("--moteur", default="piper", choices=["piper", "dossier"])
+    ap.add_argument("--moteur", default="piper", choices=["piper", "dossier", "piste"])
+    ap.add_argument("--piste", help="un seul fichier par langue (ex. export ElevenLabs), découpé aux 6 plus longs silences")
     ap.add_argument("--dossier")
     ap.add_argument("--ajuster", action="store_true")
     ap.add_argument("--audition", action="store_true", help="compare les voix installées sur la phrase d'accroche")
@@ -119,6 +140,10 @@ def main():
     lead, tail = cfg.get("lead", 0.25), cfg.get("tail", 0.5)
     clips = {}
     tmp = pathlib.Path(tempfile.mkdtemp())
+    if a.moteur == "piste":
+        decouper(pathlib.Path(a.piste), tmp / "scenes")
+        a.moteur, a.dossier = "dossier", str(tmp / "scenes")
+        cfg = dict(cfg, style=cfg.get("pisteStyle", "aucun"))  # voix studio : pas de traitement « solennel » par défaut
     for s in ORDRE:
         if a.moteur == "dossier":
             f = next((pathlib.Path(a.dossier) / f"{s}{ext}" for ext in (".wav", ".mp3", ".m4a")
@@ -131,7 +156,7 @@ def main():
             f = tmp / f"{s}.wav"
             piper(textes[s], cfg.get("model", "fr_FR-tom-medium"), cfg.get("lengthScale", 1.0), f,
                   cfg.get("speaker"), cfg.get("sentenceSilence", 0.45))
-        f = styliser(f, cfg.get("style", "solennel"), tmp / f"{s}_style.wav")
+        f = styliser(f, cfg.get("style", "solennel"), tmp / f"{s}_style.wav") if a.moteur != "dossier" or cfg.get("style") not in (None, "aucun") else f
         clips[s] = charger_audio(f)
 
     tl = dict(v["timeline"]); nominal = v.get("nominal", {})

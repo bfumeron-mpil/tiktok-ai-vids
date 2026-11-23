@@ -1638,14 +1638,17 @@
     "cta": "Ce soir-là, le football a changé d'époque. Abonne-toi."
   },
   "voice": {
-    "engine": "piper",
-    "model": "fr_FR-tom-medium",
-    "speaker": null,
-    "lengthScale": 1.15,
-    "sentenceSilence": 0.55,
-    "style": "solennel",
-    "lead": 0.35,
-    "tail": 0.6
+    "engine": "elevenlabs",
+    "model": "eleven_v4",
+    "voice_id": "3BZLNrQEzQVYs6kPOW4S",
+    "voice_name": "Justin Doré - Documentary Narrator",
+    "style": "aucun",
+    "lead": 0.3,
+    "tail": 0.6,
+    "elevenlabs": {
+      "flow_id": "5z4gBcestKTWpukvPBRo",
+      "generation_id": "2Z7tV91KkG1XWWKlcBNZ"
+    }
   },
   "i18n": {
     "en": {
@@ -1810,9 +1813,11 @@
         "cta": "That night, football changed eras. Follow for more."
       },
       "voice": {
-        "model": "en_GB-alan-medium",
-        "lengthScale": 1.12,
-        "style": "solennel"
+        "voice_id": "eQ3CIG9xw3bKocVQVkg2",
+        "voice_name": "Adrian - Cinematic History Storyteller",
+        "elevenlabs": {
+          "generation_id": "DbgYAG23amHY8Gkr8L7M"
+        }
       }
     }
   }

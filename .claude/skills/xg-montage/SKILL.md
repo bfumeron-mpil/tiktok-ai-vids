@@ -44,6 +44,12 @@ JOUR n/365, score cohérent avec le ticker, aucune faute, CTA lisible, teaser du
    (voix descendue d'un demi-ton, chaleur dans le grave, aigus adoucis, petite salle). Choisir la voix une fois avec
    `tools/voix.py … --audition`. Écrire pour l'oreille : dates en toutes lettres, « … » pour les respirations,
    phrases de 3 à 10 mots. Jamais d'imitation ni de clonage de la voix d'une personne réelle.
+   **Voix retenues (ElevenLabs, connecteur)** : FR « Justin Doré – Documentary Narrator » (`3BZLNrQEzQVYs6kPOW4S`),
+   EN « Adrian – Cinematic History Storyteller » (`eQ3CIG9xw3bKocVQVkg2`), modèle `eleven_v4`.
+   Une génération par langue : le texte `voiceover` des 7 scènes enchaîné, `[slowly]` en tête, `[long pause]` entre
+   les scènes, `[warmly]` avant le CTA. Récupérer le MP3, puis
+   `python3 tools/voix.py episodes/<slug>.json --lang fr --moteur piste --piste voix_fr.mp3 --ajuster --sortie …`
+   (découpe aux 6 plus longs silences, étire les scènes). Plan gratuit : 10 000 caractères/mois ≈ 5 épisodes FR+EN.
    Niveau au-dessus : un comédien voix off sous contrat (même chaîne avec `--moteur dossier`).
 2. **Musique sous licence** (Artlist, Epidemic Sound) à la place de la nappe procédurale ; garder les impacts.
 3. **Moteur WebGL** (three.js + post-traitement bloom/DOF) pour l'éclairage et les ombres réelles : le JSON
