@@ -1,0 +1,33 @@
+# Récupère des fichiers audio (voix off ElevenLabs, musiques…) depuis des liens signés
+# et les dépose dans le dépôt, pour que le montage puisse les utiliser.
+name: Récupérer l'audio
+on:
+  workflow_dispatch:
+    inputs:
+      fichiers:
+        description: "Lignes « chemin/dans/le/depot.mp3 URL », séparées par des retours à la ligne ou des ;"
+        required: true
+permissions:
+  contents: write
+jobs:
+  recuperer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Télécharger
+        env:
+          FICHIERS: ${{ inputs.fichiers }}
+        run: |
+          echo "$FICHIERS" | tr ';' '\n' | while read -r chemin url; do
+            [ -z "$chemin" ] && continue
+            mkdir -p "$(dirname "$chemin")"
+            curl -fsSL --retry 3 -o "$chemin" "$url"
+            echo "$chemin : $(stat -c %s "$chemin") octets"
+          done
+      - name: Déposer dans le dépôt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A audio
+          git commit -m "Audio récupéré par le workflow" || echo "rien de nouveau"
+          git push
